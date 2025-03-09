@@ -3,11 +3,18 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    position: relative;
   }
 
   &__info {
     max-width: 550px;
     width: 100%;
+    @media (max-width: 1300px) {
+      max-width: 510px;
+    }
+    @media (max-width: 1280px) {
+      max-width: 450px;
+    }
   }
 
   &__subtext {
@@ -25,6 +32,9 @@
   &__text {
     margin: 25px 0 40px;
     line-height: 1.5;
+    @media (max-width: 860px) {
+      margin: 20px 0 30px;
+    }
   }
 
   &__photos {
@@ -32,18 +42,56 @@
     right: -160px;
     display: flex;
     align-items: flex-end;
+    @include r($desktop) {
+      margin-left: auto;
+      right: 0;
+    }
+    @include r($tablet) {
+      position: absolute;
+      right: -60px;
+    }
+    @media (max-width: 720px) {
+      right: -90px;
+    }
   }
 
   &__column {
     @include flex-column(25);
+    @media (max-width: 1300px) {
+      gap: 20px;
+    }
+    @include r($desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+    }
   }
 
   &__img {
     @include objectCoverBg;
+    @include r($desktop) {
+      border-radius: 20px;
+    }
+
+    &:first-child {
+      @include r($tablet) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @include r($tablet) {
+        height: 400px;
+        width: auto;
+      }
+    }
 
     &--big {
       position: relative;
       top: -80px;
+      @include r($desktop) {
+        display: none;
+      }
     }
   }
 }

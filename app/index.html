@@ -10,6 +10,7 @@
       content="Студия звукозаписи в Екатеринбурге – запись, сведение, озвучка, аренда. Качественный звук, комфорт, индивидуальный подход. Запишитесь онлайн!"
   >
   <title>Студия SERVERНЫЙ MIR</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -443,10 +444,10 @@
                    placeholder="Введите номер телефона">
           </label>
           <label class="contacts__label">
-            <input class="input" type="text" name="question" id="question" maxlength="255" required
-                   placeholder="Введите свой вопрос">
+            <input class="input" type="text" name="datetime" id="datetime" maxlength="255" required
+                   placeholder="Выберите время">
           </label>
-          <button class="contacts__btn btn" type="submit">Получите бесплатную консультацию</button>
+          <button class="contacts__btn btn" type="submit">Отправить данные</button>
           <p class="contacts__agree">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
               <path
@@ -512,6 +513,11 @@
           </div>
         </div>
       </div>
+      <p class="footer__text footer__text--mobile">
+        ИП Аветисян Анна Александровна <br>
+        ИНН: 665811779889 <br>
+        ОГРН: 320665800114629
+      </p>
     </div>
   </div>
 </footer>
@@ -525,6 +531,7 @@
   </p>
   <button class="modal__btn btn" type="button">Close window</button>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="js/main.min.js" type="module"></script>
 <script src="js/phone-mask.js" type="module"></script>
 </body>

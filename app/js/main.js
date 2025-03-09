@@ -48,3 +48,25 @@ new Swiper('.reviews__swiper', {
     }
   }
 });
+
+const today = new Date();
+const threeMonthsFromNow = new Date(today.getFullYear(), today.getMonth() + 3, today.getDate());
+
+flatpickr("#datetime", {
+  enableTime: true,
+  dateFormat: "d F H:i",
+  time_24hr: true,
+  minDate: today,
+  maxDate: threeMonthsFromNow,
+  locale: {
+    firstDayOfWeek: 1,
+    weekdays: {
+      shorthand: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      longhand: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+    },
+    months: {
+      shorthand: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+      longhand: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+    }
+  }
+});

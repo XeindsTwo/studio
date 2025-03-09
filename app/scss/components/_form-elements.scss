@@ -7,6 +7,9 @@
   border: 1px solid transparent;
   background-color: #eaf3ff;
   transition: border .4s, color .4s;
+  @include r($phone) {
+    font-size: 15px;
+  }
 
   &:hover {
     border-color: $accent;
