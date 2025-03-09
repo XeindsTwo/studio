@@ -1,0 +1,113 @@
+.footer {
+  background-color: #E7F5EC;
+  padding: 40px 0;
+  @include r($desktop) {
+    padding: 35px 0;
+  }
+  @include r($lg) {
+    padding: 30px 0;
+  }
+  @include r($phone) {
+    padding: 27px 0 22px;
+  }
+
+  &__logo {
+    @include r($lg) {
+      width: 174px;
+      height: auto;
+    }
+  }
+
+  &__head {
+    @include flex-between-center-gap(30);
+    margin-bottom: 45px;
+    @include r($phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    @include flex-align-center(20);
+    gap: 15px 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    @include r($phone) {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 1px 2px;
+    border: 1px solid transparent;
+    transition: color .4s, background-color .4s, border .4s;
+    @include r($phone) {
+      font-size: 17px;
+    }
+
+    &:hover {
+      color: #60A475;
+    }
+
+    &:focus {
+      border-color: #0f141d;
+    }
+  }
+
+  &__socials {
+    @include flex-align-center(10);
+    @include r($phone) {
+      justify-content: center;
+    }
+
+    a {
+      border: 1px solid transparent;
+      opacity: 1;
+      width: 48px;
+      height: 48px;
+      padding: 7px;
+      border-radius: 50%;
+      background-color: #0c8c74;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: color .4s, opacity .4s, border .4s, background-color .4s;
+
+      &:hover {
+        background-color: #0eb293;
+      }
+
+      &:focus {
+        background-color: transparent;
+        border-color: #0c8c74;
+
+        svg path {
+          fill: #0c8c74;
+        }
+      }
+
+      &.telegram {
+        background-color: #2aabee;
+
+        svg {
+          transform: translateX(-2px);
+        }
+
+        &:hover {
+          background-color: #2082b4;
+        }
+
+        &:focus {
+          border-color: #2aabee;
+          background-color: transparent;
+
+          svg path {
+            fill: #2aabee;
+          }
+        }
+      }
+    }
+  }
+}

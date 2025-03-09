@@ -1,0 +1,12 @@
+.title-section {
+  font-size: 42px;
+  line-height: 1.16;
+  font-family: $interBold;
+  color: #1E1E1E;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+
+  &--center {
+    text-align: center;
+  }
+}

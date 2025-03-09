@@ -1,0 +1,99 @@
+.reviews {
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__inner {
+    position: relative;
+    user-select: none;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 20%;
+    z-index: 50;
+    @include flex-center;
+    width: 56px;
+    height: 56px;
+    left: -28px;
+    border-radius: 50%;
+    background-color: #1b3877;
+    transition: opacity .4s, background-color .4s;
+    box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      background-color: #0463cb;
+    }
+
+    &--next {
+      left: auto;
+      right: -28px;
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      background-color: #fff;
+      opacity: .8;
+
+      svg path {
+        stroke: #1e1e1e;
+      }
+    }
+  }
+
+  &__card {
+    @include bg;
+    min-height: 475px;
+    padding: 18px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  &__info {
+    position: relative;
+    border-radius: 18px;
+    padding-bottom: 18px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  &__head {
+    @include flex-center;
+    position: relative;
+    max-width: max-content;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    margin: -30px auto 15px;
+  }
+
+  &__avatar {
+    @include objectCoverBg;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  &__service {
+    margin-bottom: 20px;
+    opacity: .6;
+    display: block;
+    font-size: 16px;
+  }
+
+  &__text {
+    margin-bottom: 18px;
+    font-size: 17px;
+  }
+
+  &__stars {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,49 @@
+.comfort {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__info {
+    max-width: 550px;
+    width: 100%;
+  }
+
+  &__subtext {
+    margin-bottom: 20px;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2.15px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin: 25px 0 40px;
+    line-height: 1.5;
+  }
+
+  &__photos {
+    position: relative;
+    right: -160px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__column {
+    @include flex-column(25);
+  }
+
+  &__img {
+    @include objectCoverBg;
+
+    &--big {
+      position: relative;
+      top: -80px;
+    }
+  }
+}

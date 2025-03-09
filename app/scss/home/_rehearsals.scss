@@ -1,0 +1,27 @@
+.rehearsals {
+  &__inner {
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    display: flex;
+  }
+
+  &__img {
+    position: relative;
+    left: -50px;
+  }
+
+  &__title {
+    max-width: 430px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    @include flex-align-center(12);
+  }
+}

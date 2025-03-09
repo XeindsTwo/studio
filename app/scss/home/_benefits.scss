@@ -1,0 +1,56 @@
+.benefits {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__info {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  &__subtext {
+    margin-bottom: 20px;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2.15px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    background-color: #F7F7F7;
+    padding-bottom: 30px;
+    border-radius: 16px;
+  }
+
+  &__img {
+    @include objectCoverBg;
+    margin-bottom: 15px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  &__subtitle, &__description {
+    padding: 0 18px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    margin-bottom: 17px;
+  }
+
+  &__description {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
