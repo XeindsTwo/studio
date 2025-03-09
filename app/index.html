@@ -15,11 +15,10 @@
 </head>
 
 <body class="body">
-<img class="bg" src="images/bg-start.svg" alt="задний фон декоративный">
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <img src="images/logo.png" width="56" height="56" alt="логотип детского садика">
+      <img class="header__logo" src="images/logo-white.png" width="92" height="57" alt="логотип студии">
       <nav class="header__nav">
         <ul class="header__list">
           <li>
@@ -39,51 +38,33 @@
           </li>
         </ul>
       </nav>
-      <a class="header__btn btn desktop" href="#form">Записаться</a>
+      <p></p>
       <button class="menu-btn menu-btn--header" type="button">
         <span class="menu-btn__line"></span>
-        <span class="sr-only">Interact with menu</span>
+        <span class="sr-only">Взаимодействовать с меню</span>
       </button>
     </div>
   </div>
-  <nav class="header__mobile">
-    <ul class="header__list">
-      <li>
-        <a class="header__link mobile" href="#benefits">Преимущества</a>
-      </li>
-      <li>
-        <a class="header__link mobile" href="#programs">Программы</a>
-      </li>
-      <li>
-        <a class="header__link mobile" href="#dream">Условия сна</a>
-      </li>
-      <li>
-        <a class="header__link mobile" href="#schedule">Расписание</a>
-      </li>
-      <li>
-        <a class="header__link mobile" href="#groups">Группы</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 <main>
-  <section class="home indent" id="home">
+  <section class="home indent" id="home" style="background-image: url('images/bg.jpg')">
   <div class="container">
-    <div class="home__inner">
-      <div class="home__content">
-        <h1 class="home__title">
-          Добро пожаловать <br> в Приоритет
-        </h1>
-        <p class="home__text">
-          Детский сад в котором создаем уютную и безопасную среду, где дети учатся, развиваются и находят друзей!
-        </p>
-        <div class="home__actions">
-          <button class="btn" type="button">Записаться на экскурсию</button>
-          <button class="btn btn--transparent" type="button">Задать вопрос</button>
-        </div>
+    <div class="home__content">
+      <h1 class="home__title">
+        Студия звукозаписи в Екатеринбурге
+      </h1>
+      <p class="home__text">
+        Профессионально запишем и обработаем вашу песню, даже если вы новичок
+      </p>
+      <div class="home__links">
+        <a class="home__btn btn desktop" href="#contacts">Записаться онлайн</a>
+        <a class="home__btn home__btn--transparent btn" href="" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12.0013 0C13.8422 0.000532664 15.6582 0.42443 17.3091 1.2389C18.9599 2.05338 20.4012 3.2366 21.5215 4.69705C22.6418 6.1575 23.4111 7.85603 23.7698 9.66127C24.1286 11.4665 24.0673 13.3301 23.5905 15.1078C23.1138 16.8855 22.2344 18.5298 21.0204 19.9134C19.8065 21.297 18.2905 22.3829 16.5896 23.0871C14.8888 23.7912 13.0488 24.0948 11.2119 23.9742C9.37499 23.8537 7.59042 23.3123 5.99624 22.392L1.3154 23.948C1.13933 24.0064 0.950492 24.0147 0.769984 23.9719C0.589476 23.9292 0.424414 23.8371 0.293245 23.706C0.162076 23.5748 0.0699694 23.4098 0.0272202 23.2293C-0.015529 23.0488 -0.00723655 22.86 0.0511708 22.684L1.61145 18.006C0.55673 16.1819 0.000950687 14.1124 1.21856e-06 12.0054C-0.00094825 9.89845 0.552966 7.82838 1.60604 6.00336C2.65912 4.17834 4.17423 2.66271 5.99903 1.60888C7.82383 0.555039 9.89398 0.000147209 12.0013 0ZM7.86457 6.006C7.71189 6.01072 7.56211 6.04901 7.4259 6.11814C7.28968 6.18727 7.17037 6.28555 7.07643 6.406C6.80638 6.722 6.04425 7.492 6.04425 9.056C6.04425 10.622 7.10244 12.136 7.25046 12.348C7.39649 12.556 9.33284 15.768 12.2954 17.148C12.8461 17.404 13.4062 17.6273 13.9757 17.818C14.6838 18.058 15.3299 18.026 15.84 17.946C16.4081 17.856 17.5863 17.178 17.8324 16.432C18.0764 15.692 18.0764 15.054 18.0024 14.922C17.9284 14.79 17.7323 14.708 17.4343 14.546C16.7704 14.1862 16.0981 13.8421 15.4179 13.514C15.1479 13.406 14.9498 13.354 14.7538 13.674C14.5558 13.992 13.9937 14.71 13.8196 14.922C13.6496 15.128 13.4756 15.158 13.1795 15C12.8835 14.842 11.9333 14.504 10.8051 13.42C10.1533 12.7696 9.60067 12.027 9.16481 11.216C8.98878 10.896 9.1448 10.726 9.29083 10.566C9.42485 10.426 9.58688 10.196 9.73491 10.008C9.88094 9.828 9.93295 9.694 10.031 9.48C10.129 9.268 10.079 9.08 10.005 8.924C9.93095 8.764 9.34084 7.196 9.09279 6.558C8.85275 5.938 8.61071 6.026 8.42868 6.014C8.25865 6.006 8.06261 6.006 7.86457 6.006Z" fill="white"/>
+          </svg>
+          Написать в Whatsapp
+        </a>
       </div>
-      <img class="home__decor home__decor--one" src="images/home-1.png" width="436" height="528" alt="декор изображение">
-      <img class="home__decor home__decor--two" src="images/home-2.png" width="457" height="569" alt="декор изображение">
     </div>
   </div>
 </section>
@@ -93,7 +74,7 @@
       <div class="benefits__info">
         <span class="benefits__subtext">преимущества</span>
         <h2 class="benefits__title title-section">Почему стоит выбрать нас?</h2>
-        <a class="btn desktop" href="#form">Записаться</a>
+        <a class="btn desktop" href="#contacts">Записаться</a>
       </div>
       <ul class="benefits__list">
         <li class="benefits__item">
@@ -104,7 +85,7 @@
           </p>
         </li>
         <li class="benefits__item">
-          <img class="benefits__img" width="308" height="174" src="images/benefits/1.png" alt="Опытная команда">
+          <img class="benefits__img" width="308" height="174" src="images/benefits/2.png" alt="Опытная команда">
           <h3 class="benefits__subtitle">Опытная команда</h3>
           <p class="benefits__description">
             Работаем с профессиональными музыкантами, блогерами, брендами, знаем, как сделать крутой звук.
@@ -132,7 +113,7 @@
           а также собирать индивидуальный микс для каждого музыканта.
         </p>
         <div class="rehearsals__actions">
-          <a class="btn desktop" href="#form">Записаться</a>
+          <a class="btn desktop" href="#contacts">Записаться</a>
           <a class="btn btn--transparent desktop" href="#form">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path
@@ -168,11 +149,11 @@
             <div class="services__card">
               <img src="images/services/1.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Репетиция</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">400 ₽ / час</span>
               </div>
             </div>
           </div>
@@ -180,11 +161,11 @@
             <div class="services__card">
               <img src="images/services/2.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Запись инструментов и вокала</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">900 ₽ / час</span>
               </div>
             </div>
           </div>
@@ -192,11 +173,11 @@
             <div class="services__card">
               <img src="images/services/3.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Запись и сведение вокала с минусовкой</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">4500 ₽ / трек</span>
               </div>
             </div>
           </div>
@@ -204,11 +185,11 @@
             <div class="services__card">
               <img src="images/services/1.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Многоканальная запись репетиции</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">1000 ₽ / час</span>
               </div>
             </div>
           </div>
@@ -216,11 +197,11 @@
             <div class="services__card">
               <img src="images/services/2.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Коррекция вокала</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">1200 ₽ / трек</span>
               </div>
             </div>
           </div>
@@ -228,18 +209,42 @@
             <div class="services__card">
               <img src="images/services/3.png" height="240" width="268" alt="">
               <div class="services__info">
-                <h3 class="services__name">Запись в студии</h3>
+                <h3 class="services__name">Сведение мультитрека</h3>
                 <p class="services__description">
                   Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
                 </p>
-                <span class="services__price">1500 ₽</span>
+                <span class="services__price">6000 ₽ / трек</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services/3.png" height="240" width="268" alt="">
+              <div class="services__info">
+                <h3 class="services__name">Работа профессионального музыканта</h3>
+                <p class="services__description">
+                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                </p>
+                <span class="services__price">1500 ₽ / трек</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services/3.png" height="240" width="268" alt="">
+              <div class="services__info">
+                <h3 class="services__name">Создание аранжировки</h3>
+                <p class="services__description">
+                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                </p>
+                <span class="services__price">от 9000 ₽</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <a class="services__link btn desktop" href="#form">Записаться на услугу</a>
+    <a class="services__link btn desktop" href="#contacts">Записаться на услугу</a>
   </div>
 </section>
   <section class="reviews indent" id="reviews">
@@ -350,7 +355,7 @@
           Мы создали комфортное пространство, где каждый артист чувствует себя уверенно и вдохновлённо.
           Это помогает раскрыть творческий потенциал и записать по-настоящему живую музыку.
         </p>
-        <a class="btn desktop" href="#form">Записаться к нам</a>
+        <a class="btn desktop" href="#contacts">Записаться к нам</a>
       </div>
       <div class="comfort__photos">
         <div class="comfort__column">
@@ -479,45 +484,34 @@
 </section>
 </main>
 <footer class="footer">
-  <div class="container container--big">
+  <div class="container">
     <div class="footer__inner">
-      <div class="footer__head">
-        <img class="footer__logo" src="images/icons/logo-footer.svg" width="188" height="56" alt="логотип">
-        <a class="btn desktop" href="#form">Записаться</a>
+      <div class="footer__left">
+        <img class="footer__logo" width="129" height="80" src="images/logo-dark.png" alt="логотип студии">
+        <p class="footer__text">
+          ИП Аветисян Анна Александровна <br>
+          ИНН: 665811779889 <br>
+          ОГРН: 320665800114629
+        </p>
       </div>
-      <nav class="footer__nav">
-        <ul class="footer__list">
-          <li>
-            <a class="footer__link desktop" href="#benefits">Преимущества</a>
-          </li>
-          <li>
-            <a class="footer__link desktop" href="#programs">Программы</a>
-          </li>
-          <li>
-            <a class="footer__link desktop" href="#dream">Условия сна</a>
-          </li>
-          <li>
-            <a class="footer__link desktop" href="#schedule">Расписание</a>
-          </li>
-          <li>
-            <a class="footer__link desktop" href="#groups">Группы</a>
-          </li>
-        </ul>
-        <div class="footer__socials">
-          <a class="whatsapp" href="https://wa.me/" target="_blank">
-            <span class="sr-only">Мессенджер WhatsApp</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <path d="M0 30L2.11881 22.2962C0.811354 20.0412 0.124341 17.485 0.125597 14.8637C0.129364 6.66875 6.82994 0 15.0628 0C19.058 0.00125 22.8083 1.55 25.6292 4.36C28.4489 7.17 30.0013 10.905 30 14.8775C29.9962 23.0738 23.2957 29.7425 15.0628 29.7425C12.5634 29.7413 10.1005 29.1175 7.91886 27.9325L0 30ZM8.28561 25.2413C10.3906 26.485 12.4001 27.23 15.0578 27.2312C21.9003 27.2312 27.4743 21.6887 27.478 14.875C27.4805 8.0475 21.9329 2.5125 15.0678 2.51C8.2203 2.51 2.65009 8.0525 2.64758 14.865C2.64632 17.6463 3.46521 19.7287 4.84049 21.9075L3.58578 26.4675L8.28561 25.2413ZM22.5873 18.4113C22.4943 18.2563 22.2457 18.1637 21.8714 17.9775C21.4984 17.7912 19.6634 16.8925 19.3205 16.7687C18.9789 16.645 18.7302 16.5825 18.4803 16.955C18.2316 17.3263 17.5157 18.1638 17.2984 18.4113C17.0811 18.6588 16.8626 18.69 16.4896 18.5038C16.1166 18.3175 14.9133 17.9263 13.4878 16.66C12.3788 15.675 11.629 14.4588 11.4117 14.0863C11.1944 13.715 11.3891 13.5138 11.575 13.3288C11.7433 13.1625 11.948 12.895 12.1351 12.6775C12.3248 12.4625 12.3863 12.3075 12.5119 12.0588C12.6363 11.8113 12.5747 11.5938 12.4805 11.4075C12.3863 11.2225 11.6403 9.39375 11.3301 8.65C11.0261 7.92625 10.7184 8.02375 10.4898 8.0125L9.77393 8C9.52524 8 9.12082 8.0925 8.7792 8.465C8.43758 8.8375 7.473 9.735 7.473 11.5638C7.473 13.3925 8.8106 15.1587 8.99648 15.4062C9.18362 15.6537 11.6277 19.4063 15.3718 21.015C16.2622 21.3975 16.958 21.6262 17.4994 21.7975C18.3936 22.08 19.2075 22.04 19.8505 21.945C20.5677 21.8387 22.0585 21.0462 22.37 20.1787C22.6815 19.31 22.6815 18.5663 22.5873 18.4113Z" fill="#fff"></path>
-            </svg>
-          </a>
-          <a class="telegram" href="https://t.me/" target="_blank">
-            <span class="sr-only">Мессенджер Telegram</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.44364 7.74888C7.08077 5.20867 10.8397 3.534 12.7206 2.72489C18.0907 0.414697 19.2065 0.0133926 19.9338 0.000141289C20.0938 -0.00277319 20.4514 0.0382296 20.6831 0.232668C20.8788 0.396848 20.9326 0.618632 20.9583 0.774293C20.9841 0.929954 21.0162 1.28455 20.9907 1.56163C20.6997 4.7241 19.4405 12.3986 18.7999 15.9406C18.5288 17.4394 17.9951 17.9419 17.4784 17.9911C16.3554 18.098 15.5027 17.2235 14.4151 16.4861C12.7132 15.3323 11.7517 14.614 10.0997 13.488C8.19056 12.1868 9.42819 11.4716 10.5162 10.3027C10.801 9.99686 15.7486 5.34226 15.8444 4.92001C15.8564 4.86721 15.8675 4.67036 15.7544 4.56642C15.6414 4.46248 15.4745 4.49802 15.3541 4.52629C15.1834 4.56636 12.4646 6.42501 7.19761 10.1022C6.42588 10.6503 5.72687 10.9174 5.10058 10.9034C4.41015 10.888 3.08204 10.4996 2.09473 10.1677C0.883743 9.76056 -0.0787216 9.5453 0.00508745 8.85385C0.0487404 8.4937 0.528258 8.12538 1.44364 7.74888Z" fill="white"></path>
-            </svg>
-          </a>
+      <div class="footer__columns">
+        <div class="footer__column">
+          <span class="footer__column-name">О нас</span>
+          <div class="footer__list">
+            <a class="footer__link" href="">Центр</a>
+            <a class="footer__link" href="">Как пройти</a>
+            <a class="footer__link" href="">Новости</a>
+          </div>
         </div>
-      </nav>
+        <div class="footer__column">
+          <span class="footer__column-name">Разделы</span>
+          <div class="footer__list">
+            <a class="footer__link" href="">Услуги</a>
+            <a class="footer__link" href="">Отзывы</a>
+            <a class="footer__link" href="">Фото</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

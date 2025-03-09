@@ -9,7 +9,7 @@ function scrollToSection(event) {
 
   let targetOffset;
 
-  targetOffset = targetElement.offsetTop - 10;
+  targetOffset = targetElement.offsetTop - 30;
   window.scrollTo({top: targetOffset, behavior: 'smooth'});
 }
 
@@ -23,6 +23,10 @@ new Swiper('.services__swiper', {
   navigation: {
     nextEl: '.services__btn--next',
     prevEl: '.services__btn--prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false
   },
   breakpoints: {
     700: {

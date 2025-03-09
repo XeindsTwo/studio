@@ -52,6 +52,9 @@
   &__card {
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: #FFFFFF;
 
     img {
@@ -61,7 +64,10 @@
   }
 
   &__info {
-    padding: 25px 21px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 25px 21px 24px;
   }
 
   &__name {
@@ -76,7 +82,12 @@
   }
 
   &__price {
+    margin-top: auto;
     font-size: 24px;
     color: #294786;
+  }
+
+  .swiper-slide {
+    height: auto;
   }
 }
