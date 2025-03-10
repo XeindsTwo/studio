@@ -46,6 +46,25 @@
       </button>
     </div>
   </div>
+  <nav class="header__mobile">
+    <ul class="header__list">
+      <li>
+        <a class="header__link desktop" href="#benefits">Преимущества</a>
+      </li>
+      <li>
+        <a class="header__link desktop" href="#programs">Программы</a>
+      </li>
+      <li>
+        <a class="header__link desktop" href="#dream">Условия сна</a>
+      </li>
+      <li>
+        <a class="header__link desktop" href="#schedule">Расписание</a>
+      </li>
+      <li>
+        <a class="header__link desktop" href="#groups">Группы</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
   <section class="home indent" id="home" style="background-image: url('images/bg.jpg')">
@@ -541,6 +560,18 @@
     contact you by e-mail at <span id="modal-email"></span>
   </p>
   <button class="modal__btn btn" type="button">Close window</button>
+</div>
+<div class="modal" id="modal-success">
+  <button class="modal__close success" type="button">
+    <span class="sr-only">закрыть модальное окно</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M10.0003 8.70383L14.5374 4.16675L15.8337 5.46305L11.2966 10.0001L15.8337 14.5371L14.5374 15.8334L10.0003 11.2964L5.46329 15.8334L4.16699 14.5371L8.70403 10.0001L4.16699 5.46305L5.46329 4.16675L10.0003 8.70383Z" fill="#2C2C3C"></path>
+    </svg>
+  </button>
+  <h3 class="modal__title">Успешное создание заявки!</h3>
+  <p class="modal__text">
+    Поздравляем, ваша заявка была успешно принята. Ожидайте дальнейшего ответа от нашего менеджера
+  </p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="js/main.min.js" type="module"></script>

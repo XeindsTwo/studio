@@ -7,9 +7,9 @@
   padding: 40px 24px;
   opacity: 0;
   visibility: hidden;
-  z-index: 50;
+  z-index: 210;
   border-radius: 16px;
-  background: #131c2c;
+  background: #f6f6f6;
   box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
   transform: translate(-50%, -25%);
   transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
@@ -42,7 +42,6 @@
     line-height: 1.2;
     font-weight: 400;
     font-size: 28px;
-    color: $white;
     margin-bottom: 24px;
     @media (max-width: 610px) {
       font-size: 26px;
@@ -64,6 +63,62 @@
   &__btn {
     @media (max-width: 520px) {
       font-size: 15px;
+    }
+  }
+
+  &__close {
+    @include flex-center;
+    width: 44px;
+    height: 44px;
+    padding: 2px;
+    position: absolute;
+    top: -42px;
+    right: -42px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    background-color: #F7F7F8;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+    transition: border .4s, background-color .4s;
+    @include r($phone) {
+      top: -18px;
+      right: -20px;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .36);
+    }
+    @media (max-width: 415px) {
+      right: 9px;
+      top: 8px;
+      background-color: #F6F6F6;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
+    }
+    @media (max-height: 710px) {
+      top: -20px;
+    }
+    @media (max-height: 680px) {
+      top: 8px;
+      right: 8px;
+      background-color: #F6F6F6;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
+    }
+
+    &:hover {
+      border-color: #2193d0;
+      background-color: transparent;
+      @include r($phone) {
+        background-color: #2193d0;
+      }
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      background-color: #007aff;
+      border-color: transparent;
+
+      svg path {
+        fill: $white;
+      }
     }
   }
 }

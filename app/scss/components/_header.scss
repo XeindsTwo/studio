@@ -4,14 +4,28 @@
   z-index: 25;
 
   &__inner {
+    position: relative;
+    z-index: 150;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 25px;
   }
 
+  &__nav {
+    @media (max-width: 840px) {
+      display: none;
+    }
+  }
+
   &__logo, p {
     width: 92px;
+  }
+
+  p {
+    @media (max-width: 1060px) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -20,6 +34,14 @@
 
   &__list {
     @include flex-align-center(29);
+    @media (max-width: 900px) {
+      gap: 24px;
+    }
+    @media (max-width: 840px) {
+      flex-direction: column;
+      gap: 38px;
+      align-items: flex-start;
+    }
   }
 
   &__link {
@@ -28,6 +50,9 @@
     padding: 2px;
     border: 1px solid transparent;
     transition: color .4s, border .4s;
+    @media (max-width: 840px) {
+      font-size: 20px;
+    }
 
     &:hover {
       color: #449dff;
@@ -36,6 +61,33 @@
     &:focus {
       color: rgba(255, 255, 255, 0.73);
       border-color: #72b5fd;
+    }
+  }
+
+  &__mobile {
+    @include flex-column(30);
+    padding: 150px 15px 30px;
+    display: none;
+    pointer-events: none;
+    user-select: none;
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #182a54;
+    transform: translateX(100%);
+    height: 100vh;
+    transition: transform .7s ease-in-out;
+    @media (max-width: 840px) {
+      display: flex;
+      align-items: flex-start;
+      pointer-events: auto;
+      user-select: auto;
+    }
+
+    &.active {
+      transform: translateX(0);
     }
   }
 }

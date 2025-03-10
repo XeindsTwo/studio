@@ -6,6 +6,10 @@
   justify-content: center;
   color: #fff;
   height: 100vh;
+  @include r($sm) {
+    height: auto;
+    padding: 155px 0 60px;
+  }
 
   &::before {
     @include pseudo;
@@ -14,6 +18,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(#000, .4);
+    @media (max-width: 530px) {
+      background-color: rgba(#000, .5);
+    }
   }
 
   &__content {
@@ -23,12 +30,49 @@
     max-width: 775px;
     width: 100%;
     margin: 0 auto;
+    @media (max-width: 1300px) {
+      max-width: 700px;
+    }
+    @include r($desktop) {
+      max-width: 640px;
+    }
+    @include r($tablet) {
+      max-width: 600px;
+    }
+    @include r($sm) {
+      max-width: 540px;
+    }
   }
 
   &__title {
     font-size: 74px;
     line-height: 1.15;
     margin-bottom: 35px;
+    @media (max-width: 1300px) {
+      font-size: 68px;
+    }
+    @include r($desktop) {
+      font-size: 64px;
+    }
+    @include r($lg) {
+      font-size: 60px;
+    }
+    @include r($tablet) {
+      font-size: 56px;
+      line-height: 1.1;
+    }
+    @include r($sm) {
+      font-size: 50px;
+    }
+    @media (max-width: 530px) {
+      font-size: 46px;
+    }
+    @include r($phone) {
+      font-size: 42px;
+    }
+    @media (max-width: 380px) {
+      font-size: 40px;
+    }
   }
 
   &__text {
@@ -36,6 +80,19 @@
     margin: 0 auto 70px;
     opacity: .8;
     font-size: 22px;
+    @include r($lg) {
+      margin-bottom: 50px;
+    }
+    @include r($tablet) {
+      margin-bottom: 45px;
+    }
+    @include r($sm) {
+      font-size: 20px;
+      max-width: 490px;
+    }
+    @media (max-width: 420px) {
+      font-size: 18px;
+    }
   }
 
   &__links {
@@ -44,6 +101,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    @include r($sm) {
+      max-width: 300px;
+    }
   }
 
   &__btn {

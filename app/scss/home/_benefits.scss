@@ -3,11 +3,29 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      text-align: center;
+    }
+    @include r($phone) {
+      gap: 45px;
+    }
   }
 
   &__info {
     max-width: 320px;
     width: 100%;
+    @include r($desktop) {
+      max-width: 280px;
+    }
+
+    .btn {
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
   }
 
   &__subtext {
@@ -16,28 +34,63 @@
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2.15px;
+    @media (max-width: 1100px) {
+      justify-content: center;
+    }
   }
 
   &__title {
     margin-bottom: 45px;
+    @media (max-width: 1100px) {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    @include r($desktop) {
+      gap: 12px;
+    }
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 540px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 350px;
+    }
   }
 
   &__item {
-    background-color: #F7F7F7;
+    background-color: #f6f6f6;
     padding-bottom: 30px;
     border-radius: 16px;
+
+    &:last-child {
+      @include r($tablet) {
+        grid-column: span 2;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+      @include r($sm) {
+        max-width: 320px;
+      }
+      @media (max-width: 540px) {
+        grid-column: span 1;
+        max-width: 100%;
+      }
+    }
   }
 
   &__img {
     @include objectCoverBg;
     margin-bottom: 15px;
     border-radius: 18px 18px 0 0;
+    @media (max-width: 1150px) {
+      height: 160px;
+      width: 100%;
+    }
   }
 
   &__subtitle, &__description {
@@ -47,10 +100,16 @@
   &__subtitle {
     font-size: 22px;
     margin-bottom: 17px;
+    @media (max-width: 940px) {
+      font-size: 20px;
+    }
   }
 
   &__description {
     line-height: 1.5;
     font-size: 18px;
+    @media (max-width: 940px) {
+      font-size: 16px;
+    }
   }
 }
