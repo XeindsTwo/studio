@@ -132,18 +132,20 @@
   <div class="container">
     <h2 class="title-section title-section--center">Наши услуги</h2>
     <div class="services__inner">
-      <button class="services__btn services__btn--prev" type="button">
-        <span class="sr-only">Предыдущий слайд</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-          <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="services__btn services__btn--next" type="button">
-        <span class="sr-only">Следующий слайд</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-          <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+      <div class="services__navigation">
+        <button class="services__btn services__btn--prev" type="button">
+          <span class="sr-only">Предыдущий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="services__btn services__btn--next" type="button">
+          <span class="sr-only">Следующий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
       <div class="services__swiper swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -252,18 +254,20 @@
   <div class="container">
     <h2 class="reviews__title title-section title-section--center">Отзывы о нас</h2>
     <div class="reviews__inner">
-      <button class="reviews__btn reviews__btn--prev" type="button">
-        <span class="sr-only">Предыдущий слайд</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-          <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="reviews__btn reviews__btn--next" type="button">
-        <span class="sr-only">Следующий слайд</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-          <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+      <div class="reviews__navigation">
+        <button class="reviews__btn reviews__btn--prev" type="button">
+          <span class="sr-only">Предыдущий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="reviews__btn reviews__btn--next" type="button">
+          <span class="sr-only">Следующий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
       <div class="swiper reviews__swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -356,12 +360,19 @@
           Мы создали комфортное пространство, где каждый артист чувствует себя уверенно и вдохновлённо.
           Это помогает раскрыть творческий потенциал и записать по-настоящему живую музыку.
         </p>
+        <div class="comfort__photos comfort__photos--mobile">
+          <div class="comfort__column">
+            <img class="comfort__img" src="images/comfort/1.png" width="247" height="253" alt="фото студии звукозаписи">
+            <img class="comfort__img" src="images/comfort/2.png" width="247" height="342" alt="фото студии звукозаписи">
+          </div>
+          <img class="comfort__img comfort__img--big" src="images/comfort/3.png" alt="фото студии звукозаписи">
+        </div>
         <a class="btn desktop" href="#contacts">Записаться к нам</a>
       </div>
       <div class="comfort__photos">
         <div class="comfort__column">
-          <img class="comfort__img" src="images/comfort/1.png" width="247" height="253" alt="фото студии звукозаписи">
-          <img class="comfort__img" src="images/comfort/2.png" width="247" height="342" alt="фото студии звукозаписи">
+          <img class="comfort__img" src="images/comfort/1.png" width="223" height="229" alt="фото студии звукозаписи">
+          <img class="comfort__img" src="images/comfort/2.png" width="223" height="318" alt="фото студии звукозаписи">
         </div>
         <img class="comfort__img comfort__img--big" src="images/comfort/3.png" alt="фото студии звукозаписи">
       </div>

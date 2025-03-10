@@ -29,8 +29,17 @@ new Swiper('.services__swiper', {
     onlyInViewport: false
   },
   breakpoints: {
-    700: {
+    1040: {
       slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    280: {
+      autoHeight: true,
+      slidesPerView: 1,
       spaceBetween: 20,
     }
   }
@@ -42,8 +51,16 @@ new Swiper('.reviews__swiper', {
     prevEl: '.reviews__btn--prev',
   },
   breakpoints: {
-    700: {
+    1100: {
       slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    580: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    280: {
+      slidesPerView: 1,
       spaceBetween: 20,
     }
   }

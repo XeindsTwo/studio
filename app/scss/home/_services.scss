@@ -3,12 +3,33 @@
   background-color: #F7F7F7;
   padding: 60px 0 50px;
 
+  .title-section {
+    @media (max-width: 1250px) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__swiper {
     margin: 55px 0;
+    @media (max-width: 1250px) {
+      margin: 30px 0 44px;
+    }
+    @media (max-width: 1040px) {
+      max-width: 700px;
+      margin: 30px auto 44px;
+    }
+    @include r($phone) {
+      margin-bottom: 30px;
+    }
   }
 
   &__inner {
     position: relative;
+  }
+
+  &__navigation {
+    @include flex-align-center(10);
+    justify-content: center;
   }
 
   &__btn {
@@ -24,6 +45,13 @@
     background-color: #1b3877;
     transition: opacity .4s, background-color .4s;
     box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.06);
+    @media (max-width: 1350px) {
+      left: -14px;
+    }
+    @media (max-width: 1250px) {
+      position: static;
+      transform: none;
+    }
 
     &:hover {
       background-color: #0463cb;
@@ -32,6 +60,9 @@
     &--next {
       left: auto;
       right: -28px;
+      @media (max-width: 1350px) {
+        right: -14px;
+      }
     }
 
     &.swiper-button-disabled {
@@ -60,6 +91,12 @@
     img {
       @include objectCoverBg;
       width: 100%;
+      @include r($desktop) {
+        height: 220px;
+      }
+      @include r($tablet) {
+        height: 190px;
+      }
     }
   }
 
@@ -68,23 +105,38 @@
     flex-direction: column;
     height: 100%;
     padding: 25px 21px 24px;
+    @include r($sm) {
+      padding: 23px 19px 22px;
+    }
   }
 
   &__name {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 25px;
+    @include r($desktop) {
+      font-size: 20px;
+    }
   }
 
   &__description {
     font-size: 17px;
     margin-bottom: 25px;
+    @media (max-width: 560px) {
+      font-size: 16px;
+    }
   }
 
   &__price {
     margin-top: auto;
     font-size: 24px;
     color: #294786;
+    @include r($desktop) {
+      font-size: 22px;
+    }
+    @media (max-width: 520px) {
+      font-size: 21px;
+    }
   }
 
   .swiper-slide {

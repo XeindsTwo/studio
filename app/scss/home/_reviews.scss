@@ -8,6 +8,21 @@
     user-select: none;
   }
 
+  &__navigation {
+    @include flex-align-center(10);
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__swiper {
+    @media (max-width: 1100px) {
+      max-width: 780px;
+    }
+    @media (max-width: 580px) {
+      max-width: 360px;
+    }
+  }
+
   &__btn {
     position: absolute;
     top: 20%;
@@ -20,6 +35,16 @@
     background-color: #1b3877;
     transition: opacity .4s, background-color .4s;
     box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.06);
+    @media (max-width: 1350px) {
+      left: -14px;
+    }
+    @include r($desktop) {
+      left: -6px;
+    }
+    @media (max-width: 1100px) {
+      position: static;
+      box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.1);
+    }
 
     &:hover {
       background-color: #0463cb;
@@ -28,6 +53,12 @@
     &--next {
       left: auto;
       right: -28px;
+      @media (max-width: 1350px) {
+        right: -14px;
+      }
+      @include r($desktop) {
+        right: -6px;
+      }
     }
 
     &.swiper-button-disabled {
@@ -49,6 +80,12 @@
     justify-content: flex-end;
     flex-direction: column;
     border-radius: 20px;
+    @media (max-width: 1100px) {
+      min-height: 430px;
+    }
+    @media (max-width: 580px) {
+      padding: 12px;
+    }
   }
 
   &__info {
@@ -79,6 +116,9 @@
     line-height: 1;
     margin-bottom: 12px;
     font-weight: 600;
+    @include r($tablet) {
+      font-size: 18px;
+    }
   }
 
   &__service {
@@ -86,11 +126,20 @@
     opacity: .6;
     display: block;
     font-size: 16px;
+    @include r($tablet) {
+      font-size: 15px;
+    }
   }
 
   &__text {
     margin-bottom: 18px;
     font-size: 17px;
+    @include r($desktop) {
+      padding: 0 15px;
+    }
+    @include r($tablet) {
+      font-size: 16px;
+    }
   }
 
   &__stars {
