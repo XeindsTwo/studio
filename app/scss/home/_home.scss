@@ -15,12 +15,22 @@
     @include pseudo;
     top: 0;
     left: 0;
+    z-index: 5;
     width: 100%;
     height: 100%;
-    background-color: rgba(#000, .4);
+    background-color: rgba(#000, .45);
     @media (max-width: 530px) {
       background-color: rgba(#000, .5);
     }
+  }
+
+  &__video {
+    @include objectCoverBg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &__content {
@@ -129,6 +139,17 @@
 
         svg path {
           fill: #25D366;
+        }
+      }
+    }
+
+    &.telegram {
+      &:focus {
+        border-color: #239dda;
+        color: #239dda;
+
+        svg path {
+          fill: #239dda;
         }
       }
     }

@@ -19,6 +19,29 @@ menuLinks.forEach((menuLink) => {
   menuLink.addEventListener('click', scrollToSection);
 });
 
+new Swiper('.benefits__swiper', {
+/*  autoplay: true,
+  loop: true,*/
+  breakpoints: {
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    280: {
+      autoHeight: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+    }
+  },
+  pagination: {
+    el: '.swiper-pagination'
+  }
+});
+
 new Swiper('.services__swiper', {
   navigation: {
     nextEl: '.services__btn--next',
@@ -69,10 +92,8 @@ new Swiper('.reviews__swiper', {
 const today = new Date();
 const threeMonthsFromNow = new Date(today.getFullYear(), today.getMonth() + 3, today.getDate());
 
-flatpickr("#datetime", {
-  enableTime: true,
-  dateFormat: "d F H:i",
-  time_24hr: true,
+flatpickr("#date", {
+  dateFormat: "d F Y",
   minDate: today,
   maxDate: threeMonthsFromNow,
   locale: {
@@ -86,4 +107,30 @@ flatpickr("#datetime", {
       longhand: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
     }
   }
+});
+
+flatpickr("#time_from", {
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  time_24hr: true,
+  onChange: function(selectedDates) {
+    const timeFrom = selectedDates[0];
+
+    const minTime = new Date(timeFrom.getTime() + 30 * 60000);
+    flatpickr("#time_to", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true,
+      minTime: minTime,
+    });
+  }
+});
+
+flatpickr("#time_to", {
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  time_24hr: true,
 });

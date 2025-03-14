@@ -47,6 +47,10 @@
       border-radius: 0;
       border: none;
     }
+
+    &.center {
+      justify-content: center;
+    }
   }
 
   &__form {
@@ -184,6 +188,12 @@
       letter-spacing: 0;
       font-size: 21px;
     }
+  }
+
+  &__labels {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__label {

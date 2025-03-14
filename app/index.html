@@ -61,7 +61,8 @@
   </nav>
 </header>
 <main>
-  <section class="home indent" id="home" style="background-image: url('images/bg.jpg')">
+  <section class="home indent" id="home">
+  <video class="home__video" src="videos/1.webm" muted autoplay loop></video>
   <div class="container">
     <div class="home__content">
       <h1 class="home__title">
@@ -78,7 +79,7 @@
           </svg>
           Написать в Whatsapp
         </a>
-        <a class="home__btn home__btn--transparent btn" href="https://wa.me/79043867172" target="_blank">
+        <a class="home__btn home__btn--transparent telegram btn" href="https://wa.me/79043867172" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.44364 7.74888C7.08077 5.20867 10.8397 3.534 12.7206 2.72489C18.0907 0.414697 19.2065 0.0133926 19.9338 0.000141289C20.0938 -0.00277319 20.4514 0.0382296 20.6831 0.232668C20.8788 0.396848 20.9326 0.618632 20.9583 0.774293C20.9841 0.929954 21.0162 1.28455 20.9907 1.56163C20.6997 4.7241 19.4405 12.3986 18.7999 15.9406C18.5288 17.4394 17.9951 17.9419 17.4784 17.9911C16.3554 18.098 15.5027 17.2235 14.4151 16.4861C12.7132 15.3323 11.7517 14.614 10.0997 13.488C8.19056 12.1868 9.42819 11.4716 10.5162 10.3027C10.801 9.99686 15.7486 5.34226 15.8444 4.92001C15.8564 4.86721 15.8675 4.67036 15.7544 4.56642C15.6414 4.46248 15.4745 4.49802 15.3541 4.52629C15.1834 4.56636 12.4646 6.42501 7.19761 10.1022C6.42588 10.6503 5.72687 10.9174 5.10058 10.9034C4.41015 10.888 3.08204 10.4996 2.09473 10.1677C0.883743 9.76056 -0.0787216 9.5453 0.00508745 8.85385C0.0487404 8.4937 0.528258 8.12538 1.44364 7.74888Z" fill="white"></path>
           </svg>
@@ -96,29 +97,69 @@
         <h2 class="benefits__title title-section">Почему стоит выбрать нас?</h2>
         <a class="btn desktop" href="#contacts">Записаться</a>
       </div>
-      <ul class="benefits__list">
-        <li class="benefits__item">
-          <img class="benefits__img" width="308" height="174" src="images/benefits/1.png" alt="Тихие репетиции">
-          <h3 class="benefits__subtitle">Тихие репетиции</h3>
-          <p class="benefits__description">
-            Играйте в наушниках с индивидуальным миксом для каждого.
-          </p>
-        </li>
-        <li class="benefits__item">
-          <img class="benefits__img" width="308" height="174" src="images/benefits/2.png" alt="Опытная команда">
-          <h3 class="benefits__subtitle">Опытная команда</h3>
-          <p class="benefits__description">
-            Работаем с профессиональными музыкантами, блогерами, брендами, знаем, как сделать крутой звук.
-          </p>
-        </li>
-        <li class="benefits__item">
-          <img class="benefits__img" width="308" height="174" src="images/benefits/3.png" alt="Уникальная атмосфера">
-          <h3 class="benefits__subtitle">Уникальная атмосфера</h3>
-          <p class="benefits__description">
-            Комфортная студия, где легко творить и раскрывать свой потенциал.
-          </p>
-        </li>
-      </ul>
+      <div class="benefits__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/1.png" alt="Тихие репетиции">
+              <h3 class="benefits__subtitle">Тихие репетиции</h3>
+              <p class="benefits__description">
+                Играйте в наушниках с индивидуальным миксом для каждого.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/2.png" alt="Опытная команда">
+              <h3 class="benefits__subtitle">Опытная команда</h3>
+              <p class="benefits__description">
+                Работаем с профессиональными музыкантами, блогерами, брендами, знаем, как сделать крутой звук.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/4.jpg"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Уникальная атмосфера</h3>
+              <p class="benefits__description">
+                Комфортная студия, где легко творить и раскрывать свой потенциал.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/5.jpg"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Комфорт</h3>
+              <p class="benefits__description">
+                Для вас всегда чай, кофе и комфортные диванчики, чтобы скрасить ожидание.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/6.png"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Скорость</h3>
+              <p class="benefits__description">
+                Мы выполняем любую работу в кратчайшие сроки, находясь всегда на связи.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits/3.png"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Чистота и порядок</h3>
+              <p class="benefits__description">
+                Залог нашего успеха - всегда чистая и прибранная студия, чтобы вы могли творить!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
@@ -148,7 +189,7 @@
               <div class="services__info">
                 <h3 class="services__name">Репетиция</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Прокачай свой звук! Идеально для репетиций с инструментами или вокалом — запишем все как надо!
                 </p>
                 <span class="services__price">400 ₽ / час</span>
               </div>
@@ -160,7 +201,7 @@
               <div class="services__info">
                 <h3 class="services__name">Запись инструментов и вокала</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Запишем музыку, вокал или подкаст — на высшем уровне, с чистым звуком и качественной обработкой.
                 </p>
                 <span class="services__price">900 ₽ / час</span>
               </div>
@@ -172,7 +213,7 @@
               <div class="services__info">
                 <h3 class="services__name">Запись и сведение вокала с минусовкой</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Запишем вокал под минусовку и сведем трек до идеала — для твоей песни.
                 </p>
                 <span class="services__price">4500 ₽ / трек</span>
               </div>
@@ -180,11 +221,11 @@
           </div>
           <div class="swiper-slide">
             <div class="services__card">
-              <img src="images/services/3.png" height="240" width="268" alt="">
+              <img src="images/services/4.png" height="240" width="268" alt="">
               <div class="services__info">
                 <h3 class="services__name">Написание минусовки</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Создадим уникальную минусовку для твоей композиции — звучание под твои требования.
                 </p>
                 <span class="services__price">от 6000 ₽ / трек</span>
               </div>
@@ -192,11 +233,11 @@
           </div>
           <div class="swiper-slide">
             <div class="services__card">
-              <img src="images/services/1.png" height="240" width="268" alt="">
+              <img src="images/services/5.png" height="240" width="268" alt="">
               <div class="services__info">
                 <h3 class="services__name">Многоканальная запись репетиции</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Сохраним каждую деталь твоей репетиции с множеством каналов — для чистого и точного звука.
                 </p>
                 <span class="services__price">1000 ₽ / час</span>
               </div>
@@ -204,11 +245,11 @@
           </div>
           <div class="swiper-slide">
             <div class="services__card">
-              <img src="images/services/2.png" height="240" width="268" alt="">
+              <img src="images/services/6.jpg" height="240" width="268" alt="">
               <div class="services__info">
                 <h3 class="services__name">Коррекция вокала</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Сделаем твой вокал идеальным: исправим ноты и добавим профессиональный оттенок.
                 </p>
                 <span class="services__price">1200 ₽ / трек</span>
               </div>
@@ -220,7 +261,7 @@
               <div class="services__info">
                 <h3 class="services__name">Сведение мультитрека</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Превратим твои многоканальные записи в один гармоничный трек, с учетом всех нюансов.
                 </p>
                 <span class="services__price">6000 ₽ / трек</span>
               </div>
@@ -228,11 +269,11 @@
           </div>
           <div class="swiper-slide">
             <div class="services__card">
-              <img src="images/services/3.png" height="240" width="268" alt="">
+              <img src="images/services/8.png" height="240" width="268" alt="">
               <div class="services__info">
                 <h3 class="services__name">Работа профессионального музыканта</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Добавим живое звучание в твою композицию — работа профессионала в своем деле.
                 </p>
                 <span class="services__price">1500 ₽ / трек</span>
               </div>
@@ -240,11 +281,11 @@
           </div>
           <div class="swiper-slide">
             <div class="services__card">
-              <img src="images/services/3.png" height="240" width="268" alt="">
+              <img src="images/services/9.png" height="240" width="268" alt="">
               <div class="services__info">
                 <h3 class="services__name">Создание аранжировки</h3>
                 <p class="services__description">
-                  Даётся возможность записать звук, инструменты, живых выступлений, подкастов и аудиокниг
+                  Напишем аранжировку, которая поднимет твою композицию на новый уровень. Музыка, которая зацепит!
                 </p>
                 <span class="services__price">от 9000 ₽</span>
               </div>
@@ -260,20 +301,6 @@
   <div class="container">
     <h2 class="reviews__title title-section title-section--center">Отзывы о нас</h2>
     <div class="reviews__inner">
-      <div class="reviews__navigation">
-        <button class="reviews__btn reviews__btn--prev" type="button">
-          <span class="sr-only">Предыдущий слайд</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-            <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="reviews__btn reviews__btn--next" type="button">
-          <span class="sr-only">Следующий слайд</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-            <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
       <div class="swiper reviews__swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -316,36 +343,6 @@
                 <span class="reviews__service">Аренда студии</span>
                 <p class="reviews__text">
                   “Арендовал для подкаста – крутая акустика, удобное оборудование. Всё супер!”
-                </p>
-                <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="reviews__card" style="background-image: url('images/reviews/1.png')">
-              <div class="reviews__info">
-                <div class="reviews__head">
-                  <img class="reviews__avatar" width="55" height="55" src="images/avatars/1.jpg" alt="Анна Аветисян">
-                </div>
-                <p class="reviews__name">Анна Аветисян</p>
-                <span class="reviews__service">Запись в студии</span>
-                <p class="reviews__text">
-                  “Записывала песню – звук потрясающий! Профессиональный подход, удобная атмосфера. Очень довольна!”
-                </p>
-                <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="reviews__card" style="background-image: url('images/reviews/2.png')">
-              <div class="reviews__info">
-                <div class="reviews__head">
-                  <img class="reviews__avatar" width="55" height="55" src="images/avatars/2.jpg" alt="Иван Бай">
-                </div>
-                <p class="reviews__name">Иван Бай</p>
-                <span class="reviews__service">Озвучка</span>
-                <p class="reviews__text">
-                  “Озвучивал рекламу – быстро, чисто, профессионально. Отличное качество!”
                 </p>
                 <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
               </div>
@@ -406,7 +403,7 @@
               <a class="contacts__link" href="tel:+79221555883">+7 (922) 155-58-83</a>
             </div>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item center">
             <ul class="contacts__socials">
               <li>
                 <a
@@ -461,9 +458,16 @@
                    placeholder="Введите номер телефона">
           </label>
           <label class="contacts__label">
-            <input class="input" type="text" name="datetime" id="datetime" maxlength="255" required
-                   placeholder="Выберите время">
+            <input class="input" type="text" name="date" id="date" required placeholder="Выберите дату">
           </label>
+          <div class="contacts__labels">
+            <label class="contacts__label">
+              <input class="input" type="text" name="time_from" id="time_from" required placeholder="Время с">
+            </label>
+            <label class="contacts__label">
+              <input class="input" type="text" name="time_to" id="time_to" required placeholder="Время до">
+            </label>
+          </div>
           <button class="contacts__btn btn" type="submit">Отправить данные</button>
           <p class="contacts__agree">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">

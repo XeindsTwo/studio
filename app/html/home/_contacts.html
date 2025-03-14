@@ -19,7 +19,7 @@
               <a class="contacts__link" href="tel:+79221555883">+7 (922) 155-58-83</a>
             </div>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item center">
             <ul class="contacts__socials">
               <li>
                 <a
@@ -74,9 +74,16 @@
                    placeholder="Введите номер телефона">
           </label>
           <label class="contacts__label">
-            <input class="input" type="text" name="datetime" id="datetime" maxlength="255" required
-                   placeholder="Выберите время">
+            <input class="input" type="text" name="date" id="date" required placeholder="Выберите дату">
           </label>
+          <div class="contacts__labels">
+            <label class="contacts__label">
+              <input class="input" type="text" name="time_from" id="time_from" required placeholder="Время с">
+            </label>
+            <label class="contacts__label">
+              <input class="input" type="text" name="time_to" id="time_to" required placeholder="Время до">
+            </label>
+          </div>
           <button class="contacts__btn btn" type="submit">Отправить данные</button>
           <p class="contacts__agree">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
