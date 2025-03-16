@@ -13,6 +13,7 @@
   }
 
   &__swiper {
+    cursor: grab;
     @media (max-width: 660px) {
       margin-bottom: 25px;
     }

@@ -2,6 +2,17 @@ import {setupMobileMenu} from "./mobileMenu.js";
 
 setupMobileMenu();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".home__video");
+  video.removeAttribute("controls");
+
+  setTimeout(function () {
+    const iframe = document.getElementById("mapFrame");
+    iframe.src = iframe.getAttribute("data-src");
+    iframe.style.display = "block";
+  }, 3000);
+});
+
 function scrollToSection(event) {
   event.preventDefault();
   const targetId = event.target.getAttribute('href').slice(1);
@@ -20,8 +31,8 @@ menuLinks.forEach((menuLink) => {
 });
 
 new Swiper('.benefits__swiper', {
-/*  autoplay: true,
-  loop: true,*/
+  autoplay: true,
+  loop: true,
   breakpoints: {
     960: {
       slidesPerView: 3,
@@ -96,6 +107,7 @@ flatpickr("#date", {
   dateFormat: "d F Y",
   minDate: today,
   maxDate: threeMonthsFromNow,
+  disableMobile: true,
   locale: {
     firstDayOfWeek: 1,
     weekdays: {
@@ -113,6 +125,7 @@ flatpickr("#time_from", {
   enableTime: true,
   noCalendar: true,
   dateFormat: "H:i",
+  disableMobile: true,
   time_24hr: true,
   onChange: function(selectedDates) {
     const timeFrom = selectedDates[0];
@@ -123,6 +136,7 @@ flatpickr("#time_from", {
       noCalendar: true,
       dateFormat: "H:i",
       time_24hr: true,
+      disableMobile: true,
       minTime: minTime,
     });
   }
@@ -131,6 +145,7 @@ flatpickr("#time_from", {
 flatpickr("#time_to", {
   enableTime: true,
   noCalendar: true,
+  disableMobile: true,
   dateFormat: "H:i",
   time_24hr: true,
 });

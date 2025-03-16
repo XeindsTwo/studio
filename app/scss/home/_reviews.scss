@@ -8,67 +8,24 @@
     user-select: none;
   }
 
-  &__navigation {
-    @include flex-align-center(10);
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  &__swiper {
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     @media (max-width: 1100px) {
-      max-width: 780px;
+      grid-gap: 14px;
     }
-    @media (max-width: 580px) {
-      max-width: 360px;
+    @media (max-width: 1060px) {
+      max-width: 750px;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
     }
-  }
-
-  &__btn {
-    position: absolute;
-    top: 20%;
-    z-index: 50;
-    @include flex-center;
-    width: 56px;
-    height: 56px;
-    left: -28px;
-    border-radius: 50%;
-    background-color: #1b3877;
-    transition: opacity .4s, background-color .4s;
-    box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.06);
-    @media (max-width: 1350px) {
-      left: -14px;
+    @media (max-width: 660px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 400px;
     }
-    @include r($desktop) {
-      left: -6px;
-    }
-    @media (max-width: 1100px) {
-      position: static;
-      box-shadow: 0 7.031px 19.531px 0 rgba(0, 0, 0, 0.1);
-    }
-
-    &:hover {
-      background-color: #0463cb;
-    }
-
-    &--next {
-      left: auto;
-      right: -28px;
-      @media (max-width: 1350px) {
-        right: -14px;
-      }
-      @include r($desktop) {
-        right: -6px;
-      }
-    }
-
-    &.swiper-button-disabled {
-      pointer-events: none;
-      background-color: #fff;
-      opacity: .8;
-
-      svg path {
-        stroke: #1e1e1e;
-      }
+    @include r($phone) {
+      margin: 0 -3px;
     }
   }
 
@@ -83,8 +40,26 @@
     @media (max-width: 1100px) {
       min-height: 430px;
     }
+    @include r($tablet) {
+      padding: 18px 14px 12px;
+    }
     @media (max-width: 580px) {
       padding: 12px;
+    }
+
+    &:last-child {
+      @media (max-width: 1060px) {
+        grid-column: span 2;
+        margin: 0 auto;
+        max-width: 370px;
+      }
+      @include r($tablet) {
+        max-width: 345px;
+      }
+      @media (max-width: 660px) {
+        max-width: 100%;
+        grid-column: span 1;
+      }
     }
   }
 

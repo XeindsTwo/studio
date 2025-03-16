@@ -19,7 +19,7 @@
   }
 
   &__logo, p {
-    width: 92px;
+    width: 105px;
   }
 
   p {
@@ -52,6 +52,9 @@
     transition: color .4s, border .4s;
     @media (max-width: 840px) {
       font-size: 20px;
+    }
+    @media (max-width: 400px) {
+      font-size: 18px;
     }
 
     &:hover {
