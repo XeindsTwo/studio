@@ -98,6 +98,10 @@
         height: 190px;
       }
     }
+
+    &.bottom img {
+      object-position: bottom;
+    }
   }
 
   &__info {

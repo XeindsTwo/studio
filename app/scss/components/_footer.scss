@@ -86,9 +86,7 @@
 
   &__list {
     @include flex-column(16);
-    @include r($tablet) {
-      margin-left: -2px;
-    }
+    margin-left: -2px;
     @media (max-width: 660px) {
       align-items: center;
     }

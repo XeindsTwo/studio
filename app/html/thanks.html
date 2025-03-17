@@ -1,0 +1,27 @@
+@include('components/_head.html')
+
+<body class="body">
+<style>
+  .modal {
+    position: relative;
+    margin: 40px auto 60px;
+    transform: none;
+    left: 0;
+    top: 0;
+  }
+
+  .modal.active {
+    transform: none;
+  }
+</style>
+<main>
+  <div class="modal active" id="modal-success">
+    <h3 class="modal__title">Успешное создание заявки!</h3>
+    <p class="modal__text">
+      Поздравляем, ваша заявка была успешно принята. Ожидайте дальнейшего ответа от нашего менеджера.
+    </p>
+    <a class="modal__btn" href="/">Вернуться на главную</a>
+  </div>
+</main>
+<script src="js/main.min.js" type="module"></script>
+</body>

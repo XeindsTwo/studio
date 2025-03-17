@@ -5,12 +5,6 @@ setupMobileMenu();
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.querySelector(".home__video");
   video.removeAttribute("controls");
-
-  setTimeout(function () {
-    const iframe = document.getElementById("mapFrame");
-    iframe.src = iframe.getAttribute("data-src");
-    iframe.style.display = "block";
-  }, 3000);
 });
 
 function scrollToSection(event) {

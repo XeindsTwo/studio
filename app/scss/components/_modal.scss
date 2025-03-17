@@ -121,4 +121,30 @@
       }
     }
   }
+
+  &__btn {
+    @include flex-center;
+    margin-top: 25px;
+    padding: 17px 24px;
+    color: $white;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    max-width: max-content;
+    font-size: 16px;
+    background-color: $accent;
+    transition: border .4s, background-color .4s, color .4s;
+    @media (max-width: 405px) {
+      font-size: 15px;
+    }
+
+    &:hover {
+      background-color: #016de3;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: $accent;
+      color: $black100;
+    }
+  }
 }

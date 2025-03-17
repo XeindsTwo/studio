@@ -19,6 +19,7 @@
 
   &__item {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 26px 30px;
     background-color: $white;
@@ -159,6 +160,14 @@
         @media (max-width: 530px) {
           svg {
             height: 25px;
+          }
+        }
+      }
+
+      &.youtube {
+        &:focus {
+          svg path {
+            fill: $white;
           }
         }
       }
