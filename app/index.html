@@ -20,7 +20,9 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <img class="header__logo" src="images/icons/logo-white.svg" width="100" height="64" alt="логотип студии">
+      <div class="header__logo">
+        <img class="header__img" src="images/icons/logo-white.svg" width="100" height="64" alt="логотип студии">
+      </div>
       <nav class="header__nav">
         <ul class="header__list">
           <li>
@@ -37,7 +39,15 @@
           </li>
         </ul>
       </nav>
-      <p></p>
+      <div class="header__right">
+        <a class="header__phone" href="tel:+79221555883">
+          <span class="sr-only">Открыть номер телефона</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+            <path d="M6.70646 3.5441L7.13913 4.31939C7.5296 5.01904 7.37285 5.93687 6.75787 6.55185C6.75787 6.55186 6.75787 6.55186 6.75787 6.55186C6.75776 6.55197 6.01201 7.29792 7.36441 8.65031C8.71617 10.0021 9.46208 9.25763 9.46286 9.25685C9.46288 9.25683 9.46287 9.25684 9.4629 9.25682C10.0779 8.64186 10.9957 8.48513 11.6953 8.87559L12.4706 9.30826C13.5271 9.89787 13.6519 11.3795 12.7232 12.3081C12.1652 12.8661 11.4817 13.3003 10.726 13.329C9.45391 13.3772 7.29358 13.0552 5.12653 10.8882C2.95948 8.72114 2.63754 6.56081 2.68576 5.28871C2.71441 4.53306 3.1486 3.84948 3.7066 3.29148C4.63523 2.36284 6.11685 2.48761 6.70646 3.5441Z" stroke="#fff" stroke-width="1.44167" stroke-linecap="round"></path>
+          </svg>
+          +7 (922) 155-58-83
+        </a>
+      </div>
       <button class="menu-btn menu-btn--header" type="button">
         <span class="menu-btn__line"></span>
         <span class="sr-only">Взаимодействовать с меню</span>
@@ -45,6 +55,13 @@
     </div>
   </div>
   <nav class="header__mobile">
+    <a class="header__phone header__phone--mobile" href="tel:+79221555883">
+      <span class="sr-only">Открыть номер телефона</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <path d="M6.70646 3.5441L7.13913 4.31939C7.5296 5.01904 7.37285 5.93687 6.75787 6.55185C6.75787 6.55186 6.75787 6.55186 6.75787 6.55186C6.75776 6.55197 6.01201 7.29792 7.36441 8.65031C8.71617 10.0021 9.46208 9.25763 9.46286 9.25685C9.46288 9.25683 9.46287 9.25684 9.4629 9.25682C10.0779 8.64186 10.9957 8.48513 11.6953 8.87559L12.4706 9.30826C13.5271 9.89787 13.6519 11.3795 12.7232 12.3081C12.1652 12.8661 11.4817 13.3003 10.726 13.329C9.45391 13.3772 7.29358 13.0552 5.12653 10.8882C2.95948 8.72114 2.63754 6.56081 2.68576 5.28871C2.71441 4.53306 3.1486 3.84948 3.7066 3.29148C4.63523 2.36284 6.11685 2.48761 6.70646 3.5441Z" stroke="#fff" stroke-width="1.44167" stroke-linecap="round"></path>
+      </svg>
+      +7 (922) 155-58-83
+    </a>
     <ul class="header__list">
       <li>
         <a class="header__link mobile" href="#services">Услуги </a>
@@ -63,485 +80,624 @@
 </header>
 <main>
   <section class="home indent" id="home">
-    <video class="home__video" src="videos/2.webm" muted autoplay playsinline loop></video>
-    <div class="container">
-      <div class="home__content">
-        <h1 class="home__title">
-          Студия звукозаписи в Екатеринбурге
-        </h1>
-        <p class="home__text">
-          Профессионально запишем и обработаем вашу песню, даже если вы новичок
-        </p>
-        <div class="home__links">
-          <a class="home__btn btn desktop" href="#contacts">Записаться онлайн</a>
-          <a class="home__btn home__btn--transparent btn" href="https://wa.me/79043867172" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                  d="M12.0013 0C13.8422 0.000532664 15.6582 0.42443 17.3091 1.2389C18.9599 2.05338 20.4012 3.2366 21.5215 4.69705C22.6418 6.1575 23.4111 7.85603 23.7698 9.66127C24.1286 11.4665 24.0673 13.3301 23.5905 15.1078C23.1138 16.8855 22.2344 18.5298 21.0204 19.9134C19.8065 21.297 18.2905 22.3829 16.5896 23.0871C14.8888 23.7912 13.0488 24.0948 11.2119 23.9742C9.37499 23.8537 7.59042 23.3123 5.99624 22.392L1.3154 23.948C1.13933 24.0064 0.950492 24.0147 0.769984 23.9719C0.589476 23.9292 0.424414 23.8371 0.293245 23.706C0.162076 23.5748 0.0699694 23.4098 0.0272202 23.2293C-0.015529 23.0488 -0.00723655 22.86 0.0511708 22.684L1.61145 18.006C0.55673 16.1819 0.000950687 14.1124 1.21856e-06 12.0054C-0.00094825 9.89845 0.552966 7.82838 1.60604 6.00336C2.65912 4.17834 4.17423 2.66271 5.99903 1.60888C7.82383 0.555039 9.89398 0.000147209 12.0013 0ZM7.86457 6.006C7.71189 6.01072 7.56211 6.04901 7.4259 6.11814C7.28968 6.18727 7.17037 6.28555 7.07643 6.406C6.80638 6.722 6.04425 7.492 6.04425 9.056C6.04425 10.622 7.10244 12.136 7.25046 12.348C7.39649 12.556 9.33284 15.768 12.2954 17.148C12.8461 17.404 13.4062 17.6273 13.9757 17.818C14.6838 18.058 15.3299 18.026 15.84 17.946C16.4081 17.856 17.5863 17.178 17.8324 16.432C18.0764 15.692 18.0764 15.054 18.0024 14.922C17.9284 14.79 17.7323 14.708 17.4343 14.546C16.7704 14.1862 16.0981 13.8421 15.4179 13.514C15.1479 13.406 14.9498 13.354 14.7538 13.674C14.5558 13.992 13.9937 14.71 13.8196 14.922C13.6496 15.128 13.4756 15.158 13.1795 15C12.8835 14.842 11.9333 14.504 10.8051 13.42C10.1533 12.7696 9.60067 12.027 9.16481 11.216C8.98878 10.896 9.1448 10.726 9.29083 10.566C9.42485 10.426 9.58688 10.196 9.73491 10.008C9.88094 9.828 9.93295 9.694 10.031 9.48C10.129 9.268 10.079 9.08 10.005 8.924C9.93095 8.764 9.34084 7.196 9.09279 6.558C8.85275 5.938 8.61071 6.026 8.42868 6.014C8.25865 6.006 8.06261 6.006 7.86457 6.006Z"
-                  fill="white"/>
-            </svg>
-            Написать в Whatsapp
-          </a>
-          <a class="home__btn home__btn--transparent telegram btn" href="https://t.me/northernstudio" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1.44364 7.74888C7.08077 5.20867 10.8397 3.534 12.7206 2.72489C18.0907 0.414697 19.2065 0.0133926 19.9338 0.000141289C20.0938 -0.00277319 20.4514 0.0382296 20.6831 0.232668C20.8788 0.396848 20.9326 0.618632 20.9583 0.774293C20.9841 0.929954 21.0162 1.28455 20.9907 1.56163C20.6997 4.7241 19.4405 12.3986 18.7999 15.9406C18.5288 17.4394 17.9951 17.9419 17.4784 17.9911C16.3554 18.098 15.5027 17.2235 14.4151 16.4861C12.7132 15.3323 11.7517 14.614 10.0997 13.488C8.19056 12.1868 9.42819 11.4716 10.5162 10.3027C10.801 9.99686 15.7486 5.34226 15.8444 4.92001C15.8564 4.86721 15.8675 4.67036 15.7544 4.56642C15.6414 4.46248 15.4745 4.49802 15.3541 4.52629C15.1834 4.56636 12.4646 6.42501 7.19761 10.1022C6.42588 10.6503 5.72687 10.9174 5.10058 10.9034C4.41015 10.888 3.08204 10.4996 2.09473 10.1677C0.883743 9.76056 -0.0787216 9.5453 0.00508745 8.85385C0.0487404 8.4937 0.528258 8.12538 1.44364 7.74888Z"
-                    fill="white"></path>
-            </svg>
-            Написать в Telegram
-          </a>
-        </div>
+  <video class="home__video" src="videos/2.webm" muted autoplay playsinline loop></video>
+  <div class="container">
+    <div class="home__content">
+      <h1 class="home__title">
+        Студия звукозаписи в Екатеринбурге
+      </h1>
+      <p class="home__text">
+        Профессионально запишем и обработаем вашу песню, даже если вы новичок
+      </p>
+      <div class="home__links">
+        <a class="home__btn btn desktop" href="#contacts">Записаться онлайн</a>
+        <a class="home__btn home__btn--transparent btn" href="https://wa.me/79043867172" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12.0013 0C13.8422 0.000532664 15.6582 0.42443 17.3091 1.2389C18.9599 2.05338 20.4012 3.2366 21.5215 4.69705C22.6418 6.1575 23.4111 7.85603 23.7698 9.66127C24.1286 11.4665 24.0673 13.3301 23.5905 15.1078C23.1138 16.8855 22.2344 18.5298 21.0204 19.9134C19.8065 21.297 18.2905 22.3829 16.5896 23.0871C14.8888 23.7912 13.0488 24.0948 11.2119 23.9742C9.37499 23.8537 7.59042 23.3123 5.99624 22.392L1.3154 23.948C1.13933 24.0064 0.950492 24.0147 0.769984 23.9719C0.589476 23.9292 0.424414 23.8371 0.293245 23.706C0.162076 23.5748 0.0699694 23.4098 0.0272202 23.2293C-0.015529 23.0488 -0.00723655 22.86 0.0511708 22.684L1.61145 18.006C0.55673 16.1819 0.000950687 14.1124 1.21856e-06 12.0054C-0.00094825 9.89845 0.552966 7.82838 1.60604 6.00336C2.65912 4.17834 4.17423 2.66271 5.99903 1.60888C7.82383 0.555039 9.89398 0.000147209 12.0013 0ZM7.86457 6.006C7.71189 6.01072 7.56211 6.04901 7.4259 6.11814C7.28968 6.18727 7.17037 6.28555 7.07643 6.406C6.80638 6.722 6.04425 7.492 6.04425 9.056C6.04425 10.622 7.10244 12.136 7.25046 12.348C7.39649 12.556 9.33284 15.768 12.2954 17.148C12.8461 17.404 13.4062 17.6273 13.9757 17.818C14.6838 18.058 15.3299 18.026 15.84 17.946C16.4081 17.856 17.5863 17.178 17.8324 16.432C18.0764 15.692 18.0764 15.054 18.0024 14.922C17.9284 14.79 17.7323 14.708 17.4343 14.546C16.7704 14.1862 16.0981 13.8421 15.4179 13.514C15.1479 13.406 14.9498 13.354 14.7538 13.674C14.5558 13.992 13.9937 14.71 13.8196 14.922C13.6496 15.128 13.4756 15.158 13.1795 15C12.8835 14.842 11.9333 14.504 10.8051 13.42C10.1533 12.7696 9.60067 12.027 9.16481 11.216C8.98878 10.896 9.1448 10.726 9.29083 10.566C9.42485 10.426 9.58688 10.196 9.73491 10.008C9.88094 9.828 9.93295 9.694 10.031 9.48C10.129 9.268 10.079 9.08 10.005 8.924C9.93095 8.764 9.34084 7.196 9.09279 6.558C8.85275 5.938 8.61071 6.026 8.42868 6.014C8.25865 6.006 8.06261 6.006 7.86457 6.006Z" fill="white"/>
+          </svg>
+          Написать в Whatsapp
+        </a>
+        <a class="home__btn home__btn--transparent telegram btn" href="https://t.me/northernstudio" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.44364 7.74888C7.08077 5.20867 10.8397 3.534 12.7206 2.72489C18.0907 0.414697 19.2065 0.0133926 19.9338 0.000141289C20.0938 -0.00277319 20.4514 0.0382296 20.6831 0.232668C20.8788 0.396848 20.9326 0.618632 20.9583 0.774293C20.9841 0.929954 21.0162 1.28455 20.9907 1.56163C20.6997 4.7241 19.4405 12.3986 18.7999 15.9406C18.5288 17.4394 17.9951 17.9419 17.4784 17.9911C16.3554 18.098 15.5027 17.2235 14.4151 16.4861C12.7132 15.3323 11.7517 14.614 10.0997 13.488C8.19056 12.1868 9.42819 11.4716 10.5162 10.3027C10.801 9.99686 15.7486 5.34226 15.8444 4.92001C15.8564 4.86721 15.8675 4.67036 15.7544 4.56642C15.6414 4.46248 15.4745 4.49802 15.3541 4.52629C15.1834 4.56636 12.4646 6.42501 7.19761 10.1022C6.42588 10.6503 5.72687 10.9174 5.10058 10.9034C4.41015 10.888 3.08204 10.4996 2.09473 10.1677C0.883743 9.76056 -0.0787216 9.5453 0.00508745 8.85385C0.0487404 8.4937 0.528258 8.12538 1.44364 7.74888Z" fill="white"></path>
+          </svg>
+          Написать в Telegram
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   <section class="benefits indent" id="benefits">
-    <div class="container">
-      <div class="benefits__inner">
-        <div class="benefits__info">
-          <span class="benefits__subtext">преимущества</span>
-          <h2 class="benefits__title title-section">Почему стоит выбрать нас?</h2>
-          <a class="btn desktop" href="#contacts">Записаться</a>
-        </div>
-        <div class="benefits__swiper swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/1.webp"
-                     alt="Тихие репетиции">
-                <h3 class="benefits__subtitle">Тихие репетиции</h3>
-                <p class="benefits__description">
-                  Играйте в наушниках с индивидуальным миксом для каждого.
-                </p>
-              </div>
+  <div class="container">
+    <div class="benefits__inner">
+      <div class="benefits__info">
+        <span class="benefits__subtext">преимущества</span>
+        <h2 class="benefits__title title-section">Почему стоит выбрать нас?</h2>
+        <a class="btn desktop" href="#contacts">Записаться</a>
+      </div>
+      <div class="benefits__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/1.webp" alt="Тихие репетиции">
+              <h3 class="benefits__subtitle">Тихие репетиции</h3>
+              <p class="benefits__description">
+                Играйте в наушниках с индивидуальным миксом для каждого.
+              </p>
             </div>
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/6.webp"
-                     alt="Опытная команда">
-                <h3 class="benefits__subtitle">Опытная команда</h3>
-                <p class="benefits__description">
-                  Работаем с профессиональными музыкантами, блогерами, брендами, знаем, как сделать крутой звук.
-                </p>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/6.webp" alt="Опытная команда">
+              <h3 class="benefits__subtitle">Опытная команда</h3>
+              <p class="benefits__description">
+                Работаем с профессиональными музыкантами, блогерами, брендами, знаем, как сделать крутой звук.
+              </p>
             </div>
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/4.webp"
-                     alt="Уникальная атмосфера">
-                <h3 class="benefits__subtitle">Уникальная атмосфера</h3>
-                <p class="benefits__description">
-                  Комфортная студия, где легко творить и раскрывать свой потенциал.
-                </p>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/4.webp"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Уникальная атмосфера</h3>
+              <p class="benefits__description">
+                Комфортная студия, где легко творить и раскрывать свой потенциал.
+              </p>
             </div>
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/7.webp"
-                     alt="Уникальная атмосфера">
-                <h3 class="benefits__subtitle">Комфорт</h3>
-                <p class="benefits__description">
-                  Для вас всегда чай, кофе и комфортные диванчики, чтобы скрасить ожидание.
-                </p>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/7.webp"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Комфорт</h3>
+              <p class="benefits__description">
+                Для вас всегда чай, кофе и комфортные диванчики, чтобы скрасить ожидание.
+              </p>
             </div>
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/8.webp"
-                     alt="Уникальная атмосфера">
-                <h3 class="benefits__subtitle">Скорость</h3>
-                <p class="benefits__description">
-                  Мы выполняем любую работу в кратчайшие сроки, находясь всегда на связи.
-                </p>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/8.webp"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Скорость</h3>
+              <p class="benefits__description">
+                Мы выполняем любую работу в кратчайшие сроки, находясь всегда на связи.
+              </p>
             </div>
-            <div class="swiper-slide">
-              <div class="benefits__item">
-                <img class="benefits__img" width="308" height="174" src="images/benefits_new/3.webp"
-                     alt="Уникальная атмосфера">
-                <h3 class="benefits__subtitle">Чистота и порядок</h3>
-                <p class="benefits__description">
-                  Залог нашего успеха - всегда чистая и прибранная студия, чтобы вы могли творить!
-                </p>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="benefits__item">
+              <img class="benefits__img" width="308" height="174" src="images/benefits_new/3.webp"
+                   alt="Уникальная атмосфера">
+              <h3 class="benefits__subtitle">Чистота и порядок</h3>
+              <p class="benefits__description">
+                Залог нашего успеха - всегда чистая и прибранная студия, чтобы вы могли творить!
+              </p>
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
-  </section>
+  </div>
+</section>
   <section class="services indent" id="services">
-    <div class="container">
-      <h2 class="title-section title-section--center">Наши услуги</h2>
-      <div class="services__inner">
-        <div class="services__navigation">
-          <button class="services__btn services__btn--prev" type="button">
-            <span class="sr-only">Предыдущий слайд</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-              <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="services__btn services__btn--next" type="button">
-            <span class="sr-only">Следующий слайд</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-              <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="services__swiper swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/1.webp" loading="lazy" height="240" width="268" alt="Репетиция">
-                <div class="services__info">
-                  <h3 class="services__name">Репетиция</h3>
-                  <p class="services__description">
-                    Прокачай свой звук! Идеально для репетиций с инструментами или вокалом — запишем все как надо!
-                  </p>
-                  <span class="services__price">400 ₽ / час</span>
-                </div>
+  <div class="container">
+    <h2 class="title-section title-section--center">Наши услуги</h2>
+    <div class="services__inner">
+      <div class="services__navigation">
+        <button class="services__btn services__btn--prev" type="button">
+          <span class="sr-only">Предыдущий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M7 13L1 7L7 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="services__btn services__btn--next" type="button">
+          <span class="sr-only">Следующий слайд</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="services__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/1.webp" loading="lazy" height="240" width="268" alt="Репетиция">
+              <div class="services__info">
+                <h3 class="services__name">Репетиция</h3>
+                <p class="services__description">
+                  Прокачай свой звук! Идеально для репетиций с инструментами или вокалом — запишем все как надо!
+                </p>
+                <span class="services__price">400 ₽ / час</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/2.webp" loading="lazy" height="240" width="268"
-                     alt="Запись инструментов и вокала">
-                <div class="services__info">
-                  <h3 class="services__name">Запись инструментов и вокала</h3>
-                  <p class="services__description">
-                    Запишем музыку, вокал или подкаст — на высшем уровне, с чистым звуком и качественной обработкой.
-                  </p>
-                  <span class="services__price">900 ₽ / час</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/2.webp" loading="lazy" height="240" width="268" alt="Запись инструментов и вокала">
+              <div class="services__info">
+                <h3 class="services__name">Запись инструментов и вокала</h3>
+                <p class="services__description">
+                  Запишем музыку, вокал или подкаст — на высшем уровне, с чистым звуком и качественной обработкой.
+                </p>
+                <span class="services__price">900 ₽ / час</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/3.webp" loading="lazy" height="240" width="268"
-                     alt="Запись и сведение вокала с минусовкой">
-                <div class="services__info">
-                  <h3 class="services__name">Запись и сведение вокала с минусовкой</h3>
-                  <p class="services__description">
-                    Запишем вокал под минусовку и сведем трек до идеала — для твоей песни.
-                  </p>
-                  <span class="services__price">4500 ₽ / трек</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/3.webp" loading="lazy" height="240" width="268" alt="Запись и сведение вокала с минусовкой">
+              <div class="services__info">
+                <h3 class="services__name">Запись и сведение вокала с минусовкой</h3>
+                <p class="services__description">
+                  Запишем вокал под минусовку и сведем трек до идеала — для твоей песни.
+                </p>
+                <span class="services__price">4500 ₽ / трек</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/4.webp" loading="lazy" height="240" width="268" alt="Написание минусовки">
-                <div class="services__info">
-                  <h3 class="services__name">Написание минусовки</h3>
-                  <p class="services__description">
-                    Создадим уникальную минусовку для твоей композиции — звучание под твои требования.
-                  </p>
-                  <span class="services__price">от 6000 ₽ / трек</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/4.webp" loading="lazy" height="240" width="268" alt="Написание минусовки">
+              <div class="services__info">
+                <h3 class="services__name">Написание минусовки</h3>
+                <p class="services__description">
+                  Создадим уникальную минусовку для твоей композиции — звучание под твои требования.
+                </p>
+                <span class="services__price">от 6000 ₽ / трек</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/5.webp" loading="lazy" height="240" width="268"
-                     alt="Многоканальная запись репетиции">
-                <div class="services__info">
-                  <h3 class="services__name">Многоканальная запись репетиции</h3>
-                  <p class="services__description">
-                    Сохраним каждую деталь твоей репетиции с множеством каналов — для чистого и точного звука.
-                  </p>
-                  <span class="services__price">1000 ₽ / час</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/5.webp" loading="lazy" height="240" width="268" alt="Многоканальная запись репетиции">
+              <div class="services__info">
+                <h3 class="services__name">Многоканальная запись репетиции</h3>
+                <p class="services__description">
+                  Сохраним каждую деталь твоей репетиции с множеством каналов — для чистого и точного звука.
+                </p>
+                <span class="services__price">1000 ₽ / час</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/6.jpg" height="240" width="268" alt="Коррекция вокала">
-                <div class="services__info">
-                  <h3 class="services__name">Коррекция вокала</h3>
-                  <p class="services__description">
-                    Сделаем твой вокал идеальным: исправим ноты и добавим профессиональный оттенок.
-                  </p>
-                  <span class="services__price">1200 ₽ / трек</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/6.jpg" height="240" width="268" alt="Коррекция вокала">
+              <div class="services__info">
+                <h3 class="services__name">Коррекция вокала</h3>
+                <p class="services__description">
+                  Сделаем твой вокал идеальным: исправим ноты и добавим профессиональный оттенок.
+                </p>
+                <span class="services__price">1200 ₽ / трек</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/3.webp" loading="lazy" height="240" width="268"
-                     alt="Сведение мультитрека">
-                <div class="services__info">
-                  <h3 class="services__name">Сведение мультитрека</h3>
-                  <p class="services__description">
-                    Превратим твои многоканальные записи в один гармоничный трек, с учетом всех нюансов.
-                  </p>
-                  <span class="services__price">6000 ₽ / трек</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/3.webp" loading="lazy" height="240" width="268" alt="Сведение мультитрека">
+              <div class="services__info">
+                <h3 class="services__name">Сведение мультитрека</h3>
+                <p class="services__description">
+                  Превратим твои многоканальные записи в один гармоничный трек, с учетом всех нюансов.
+                </p>
+                <span class="services__price">6000 ₽ / трек</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card bottom">
-                <img src="images/services_new/8_new.webp" loading="lazy" height="240" width="268"
-                     alt="Работа профессионального музыканта">
-                <div class="services__info">
-                  <h3 class="services__name">Работа профессионального музыканта</h3>
-                  <p class="services__description">
-                    Добавим живое звучание в твою композицию — работа профессионала в своем деле.
-                  </p>
-                  <span class="services__price">1500 ₽ / трек</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card bottom">
+              <img src="images/services_new/8_new.webp" loading="lazy" height="240" width="268" alt="Работа профессионального музыканта">
+              <div class="services__info">
+                <h3 class="services__name">Работа профессионального музыканта</h3>
+                <p class="services__description">
+                  Добавим живое звучание в твою композицию — работа профессионала в своем деле.
+                </p>
+                <span class="services__price">1500 ₽ / трек</span>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="services__card">
-                <img src="images/services_new/9.webp" loading="lazy" height="240" width="268"
-                     alt="Создание аранжировки">
-                <div class="services__info">
-                  <h3 class="services__name">Создание аранжировки</h3>
-                  <p class="services__description">
-                    Напишем аранжировку, которая поднимет твою композицию на новый уровень. Музыка, которая зацепит!
-                  </p>
-                  <span class="services__price">от 9000 ₽</span>
-                </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img src="images/services_new/9.webp" loading="lazy" height="240" width="268" alt="Создание аранжировки">
+              <div class="services__info">
+                <h3 class="services__name">Создание аранжировки</h3>
+                <p class="services__description">
+                  Напишем аранжировку, которая поднимет твою композицию на новый уровень. Музыка, которая зацепит!
+                </p>
+                <span class="services__price">от 9000 ₽</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <a class="services__link btn desktop" href="#contacts">Записаться на услугу</a>
     </div>
-  </section>
-  <section class="reviews indent" id="reviews">
-    <div class="container">
-      <h2 class="reviews__title title-section title-section--center">Отзывы о нас</h2>
-      <div class="reviews__list">
-        <div class="reviews__card" style="background-image: url('images/reviews/5.webp')">
-          <div class="reviews__info">
-            <div class="reviews__head">
-              <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/5.webp"
-                   alt="Дима Осинцев">
+    <a class="services__link btn desktop" href="#contacts">Записаться на услугу</a>
+  </div>
+</section>
+  <section class="packages indent" id="packages">
+  <div class="container">
+    <h2 class="packages__title title-section title-section--center">Пакеты услуг</h2>
+    <ul class="packages__list">
+      <li class="tariff-card tariff-card--standard">
+        <div class="tariff-card__wrapper">
+          <span class="tariff-card__discount">Скидка -10%</span>
+          <div class="tariff-card__head">
+            <div class="tariff-card__info">
+              <h3 class="tariff-card__name">Запись песни под минус <br> + 3 часа записи</h3>
             </div>
-            <p class="reviews__name">Дима Осинцев</p>
-            <span class="reviews__service">Запись подкаста</span>
-            <p class="reviews__text">
-              “Тихо, уютно, звук чистый – идеальное место для записи. Рад, что выбрал эту студию”
-            </p>
-            <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
           </div>
-        </div>
-        <div class="reviews__card" style="background-image: url('images/reviews/6.webp')">
-          <div class="reviews__info">
-            <div class="reviews__head">
-              <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/6.webp"
-                   alt="Кристина Власова">
-            </div>
-            <p class="reviews__name">Кристина Власова</p>
-            <span class="reviews__service">Саунд-продакшн</span>
-            <p class="reviews__text">
-              “Хотела атмосферную музыку для проекта – сделали даже лучше, чем представляла. Спасибо!”
-            </p>
-            <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
+          <div class="tariff-card__pricing">
+            <p class="tariff-card__price old">8.200 ₽</p>
+            <p class="tariff-card__price new">7.000 ₽</p>
           </div>
-        </div>
-        <div class="reviews__card" style="background-image: url('images/reviews/4.webp')">
-          <div class="reviews__info">
-            <div class="reviews__head">
-              <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/4.webp"
-                   alt="Михаил Суярков">
-            </div>
-            <p class="reviews__name">Михаил Суярков</p>
-            <span class="reviews__service">Озвучка фильма</span>
-            <p class="reviews__text">
-              “Голос лёг на видео, как будто, так и было задумано. Профессиональный подход, без суеты”
-            </p>
-            <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="comfort indent" id="comfort">
-    <div class="container">
-      <div class="comfort__inner">
-        <div class="comfort__info">
-          <span class="comfort__subtext">Фото студии</span>
-          <h2 class="title-section">Комфортное <br> пространство</h2>
-          <p class="comfort__text">
-            Мы создали комфортное пространство, где каждый артист чувствует себя уверенно и вдохновлённо.
-            Это помогает раскрыть творческий потенциал и записать по-настоящему живую музыку.
-          </p>
-          <div class="comfort__photos comfort__photos--mobile">
-            <div class="comfort__column">
-              <img class="comfort__img" loading="lazy" src="images/comfort/1.png" width="247" height="253"
-                   alt="фото студии звукозаписи">
-              <img class="comfort__img" loading="lazy" src="images/comfort/2.png" width="247" height="342"
-                   alt="фото студии звукозаписи">
-            </div>
-            <img class="comfort__img comfort__img--big" loading="lazy" src="images/comfort/3.png"
-                 alt="фото студии звукозаписи">
-          </div>
-          <a class="btn desktop" href="#contacts">Записаться к нам</a>
-        </div>
-        <div class="comfort__photos">
-          <div class="comfort__column">
-            <img class="comfort__img" src="images/comfort/1.png" width="223" height="229" loading="lazy"
-                 alt="фото студии звукозаписи">
-            <img class="comfort__img" src="images/comfort/2.png" width="223" height="318" loading="lazy"
-                 alt="фото студии звукозаписи">
-          </div>
-          <img class="comfort__img comfort__img--big" src="images/comfort/3.png" loading="lazy"
-               alt="фото студии звукозаписи">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="contacts indent" id="contacts">
-    <div class="container">
-      <h2 class="title-section title-section--center">Контакты</h2>
-      <div class="contacts__items">
-        <div class="contacts__item mode">
-          <ul class="contacts__info">
-            <li class="contacts__item">
-              <span class="contacts__inscription">Адрес студии</span>
-              <div class="contacts__links">
-                <a class="contacts__link" href="https://go.2gis.com/17xdq" target="_blank">
-                  Свердловская область, город Екатеринбург, улица Фурманова, дом № 105А
-                </a>
-              </div>
+          <a class="tariff-card__btn btn btn--transparent desktop" href="#contacts">Записаться</a>
+          <ul class="tariff-card__list">
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Коррекция вокала / Сведение / Мастеринг включены в стоимость
+              </p>
             </li>
-            <li class="contacts__item">
-              <span class="contacts__inscription">Телефон и почта</span>
-              <div class="contacts__links">
-                <a class="contacts__link" href="mailto:studio@northernworld.ru">studio@northernworld.ru</a>
-                <a class="contacts__link" href="tel:+79043867172">+7 (904) 386 71-72</a>
-              </div>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                5 часов записи
+              </p>
             </li>
-            <li class="contacts__item center">
-              <ul class="contacts__socials">
-                <li>
-                  <a
-                      class="contacts__socials-link"
-                      href="https://vk.com/club229661634"
-                      target="_blank"
-                  >
-                    <span class="sr-only">Открыть ссылку на ВКонтакте</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M31.1173 16.2802C30.3862 14.808 29.4228 13.463 28.2643 12.2969C27.8762 11.8595 27.4705 11.4381 27.0481 11.0337L26.997 10.984C26.8401 10.8319 26.6851 10.6778 26.532 10.5217C28.1162 8.31887 29.4715 5.96027 30.5771 3.48248L30.6214 3.38303L30.6524 3.27821C30.7988 2.79039 30.9655 1.86312 30.3742 1.02454C29.7614 0.159087 28.7817 0.00319764 28.1245 0.00319764H25.1049C24.4725 -0.0260324 23.8471 0.145733 23.3184 0.493864C22.7897 0.841995 22.3848 1.34861 22.1618 1.94106C21.512 3.48874 20.6983 4.96241 19.7347 6.33686V2.79845C19.7347 2.34153 19.6917 1.57553 19.2012 0.930469C18.6153 0.156399 17.7673 0.00319764 17.1787 0.00319764H12.3865C11.7611 -0.0111907 11.1542 0.215477 10.6914 0.636261C10.2286 1.05705 9.94533 1.63971 9.9003 2.26359L9.89627 2.32406V2.38454C9.89627 3.03632 10.1543 3.51742 10.3612 3.81979C10.454 3.95552 10.5521 4.07916 10.6152 4.1571L10.6287 4.17457C10.6959 4.25789 10.7402 4.31299 10.7846 4.37481C10.9028 4.53339 11.0708 4.78066 11.1192 5.41765V7.39718C10.1573 5.78624 9.36859 4.07808 8.76607 2.30122L8.75532 2.27165L8.74457 2.24343C8.58062 1.81474 8.31856 1.19118 7.79311 0.71545C7.1803 0.157743 6.45461 0.00319764 5.79477 0.00319764H2.73075C2.06284 0.00319764 1.25786 0.159087 0.657153 0.79205C0.0671936 1.41561 0 2.1628 0 2.5579V2.73798L0.0376284 2.91268C0.884622 6.85174 2.63306 10.5409 5.14568 13.6905C6.29377 15.5012 7.85252 17.0158 9.69547 18.1113C11.5384 19.2068 13.6137 19.8525 15.7529 19.996L15.808 20H15.8644C16.84 20 17.8574 19.9153 18.622 19.406C19.6528 18.7179 19.7347 17.663 19.7347 17.1362V15.6069C19.9995 15.8219 20.3274 16.1095 20.7292 16.4965C21.2157 16.983 21.6027 17.405 21.9347 17.7732L22.1121 17.9694C22.3701 18.257 22.6241 18.5406 22.8552 18.773C23.1455 19.0647 23.5043 19.3859 23.9532 19.6237C24.441 19.8804 24.953 19.9973 25.4959 19.9973H28.5613C29.2077 19.9973 30.1336 19.8441 30.7854 19.0889C31.495 18.2664 31.4412 17.2572 31.2181 16.5328L31.1778 16.4025L31.1173 16.2802ZM23.4304 16.4226C23.014 15.957 22.5851 15.5026 22.1443 15.0599L22.1403 15.0559C20.3166 13.2981 19.466 12.9931 18.8639 12.9931C18.5427 12.9931 18.1893 13.028 17.9595 13.3156C17.8573 13.4535 17.7895 13.6138 17.7619 13.7833C17.7299 13.9805 17.7155 14.1802 17.7189 14.3799V17.1362C17.7189 17.4789 17.6625 17.6227 17.5039 17.7275C17.2929 17.8686 16.8427 17.9829 15.8765 17.9829C14.041 17.858 12.2614 17.2992 10.684 16.3526C9.10657 15.4059 7.77634 14.0984 6.80268 12.5375L6.79192 12.52L6.77849 12.5039C4.4377 9.59272 2.80708 6.1764 2.01581 2.52564C2.02118 2.35094 2.05881 2.24478 2.12063 2.18027C2.18379 2.11308 2.33834 2.019 2.73075 2.019H5.79477C6.13477 2.019 6.31216 2.09426 6.43983 2.20849C6.58228 2.34019 6.7086 2.56193 6.85912 2.95703C7.61169 5.16904 8.62765 7.2386 9.59121 8.75986C10.0723 9.51915 10.5454 10.1521 10.9727 10.5996C11.1864 10.8227 11.3947 11.0082 11.5949 11.1399C11.7871 11.2662 12.0061 11.367 12.2319 11.367C12.3502 11.367 12.4886 11.3535 12.6216 11.2957C12.7655 11.2325 12.8839 11.1227 12.9576 10.984C13.096 10.7313 13.135 10.3591 13.135 9.87124V5.33837C13.0638 4.23908 12.7318 3.61956 12.4093 3.18011C12.3439 3.09229 12.2767 3.00582 12.2077 2.92074L12.1903 2.89924C12.1332 2.82942 12.0785 2.75771 12.0263 2.68422C11.9609 2.60163 11.9211 2.50162 11.9121 2.39663C11.9226 2.28984 11.9736 2.19112 12.0545 2.12067C12.1355 2.05022 12.2403 2.01337 12.3475 2.01766H17.1787C17.4555 2.01766 17.5483 2.08485 17.5953 2.14802C17.6625 2.23537 17.7189 2.41679 17.7189 2.79845V8.8835C17.7189 9.6065 18.0522 10.0957 18.536 10.0957C19.0924 10.0957 19.4942 9.75836 20.1957 9.05686L20.2078 9.04342L20.2185 9.03132C21.7923 7.11277 23.0781 4.97504 24.0351 2.68556L24.0405 2.66944C24.1121 2.46691 24.2481 2.29346 24.4277 2.17572C24.6074 2.05798 24.8207 2.00245 25.035 2.01766H28.1259C28.5452 2.01766 28.6822 2.12517 28.7279 2.18833C28.775 2.25553 28.8086 2.39932 28.7279 2.68153C27.6242 5.14943 26.2596 7.49215 24.6573 9.66966L24.6466 9.68579C24.4921 9.92365 24.3214 10.1871 24.2972 10.4881C24.2703 10.8133 24.4101 11.1076 24.656 11.4248C24.8347 11.6882 25.2043 12.0497 25.5792 12.4165L25.6142 12.4515C26.0066 12.8358 26.4326 13.2524 26.7739 13.6556L26.7834 13.665L26.7928 13.6757C27.8105 14.6911 28.6569 15.8648 29.2991 17.151C29.4012 17.5004 29.3394 17.6805 29.2588 17.7732C29.166 17.8807 28.9577 17.9815 28.5626 17.9815H25.4959C25.2869 17.9872 25.0799 17.9386 24.8952 17.8404C24.6691 17.708 24.4635 17.5432 24.2851 17.3512C24.0929 17.1591 23.8846 16.9266 23.6293 16.643L23.4304 16.4226Z"
-                            fill="#0D153C"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                      class="contacts__socials-link youtube"
-                      href="https://youtube.com/@severnyymir?si=9ckltve4tu0MFG1e"
-                      target="_blank"
-                  >
-                    <span class="sr-only">Открыть ссылку на YouTube</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19" fill="none">
-                      <path
-                          d="M10.8 13.5714L17.8065 9.5L10.8 5.42857V13.5714ZM26.406 2.945C26.5815 3.58286 26.703 4.43786 26.784 5.52357C26.8785 6.60929 26.919 7.54571 26.919 8.36L27 9.5C27 12.4721 26.784 14.6571 26.406 16.055C26.0685 17.2764 25.2855 18.0636 24.0705 18.4029C23.436 18.5793 22.275 18.7014 20.493 18.7829C18.738 18.8779 17.1315 18.9186 15.6465 18.9186L13.5 19C7.8435 19 4.32 18.7829 2.9295 18.4029C1.7145 18.0636 0.9315 17.2764 0.594 16.055C0.4185 15.4171 0.297 14.5621 0.216 13.4764C0.1215 12.3907 0.081 11.4543 0.081 10.64L0 9.5C0 6.52786 0.216 4.34286 0.594 2.945C0.9315 1.72357 1.7145 0.936429 2.9295 0.597143C3.564 0.420714 4.725 0.298571 6.507 0.217143C8.262 0.122143 9.8685 0.0814286 11.3535 0.0814286L13.5 0C19.1565 0 22.68 0.217143 24.0705 0.597143C25.2855 0.936429 26.0685 1.72357 26.406 2.945Z"
-                          fill="#0D153C"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                      class="contacts__socials-link"
-                      href="https://wa.me/79043867172"
-                      target="_blank"
-                  >
-                    <span class="sr-only">Открыть ссылку на WhatsApp</span>
-                    <svg class="contacts__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                         viewBox="0 0 27 27" fill="none">
-                      <path
-                          d="M22.3568 4.63756C21.2049 3.48019 19.8329 2.56252 18.321 1.93802C16.809 1.31351 15.1873 0.994671 13.5502 1.00007C6.69095 1.00007 1.1005 6.56255 1.1005 13.3875C1.1005 15.575 1.67839 17.7 2.75879 19.575L1 26L7.59548 24.275C9.41708 25.2625 11.4648 25.7875 13.5502 25.7875C20.4095 25.7875 26 20.225 26 13.4C26 10.0875 24.706 6.97505 22.3568 4.63756ZM13.5502 23.6875C11.691 23.6875 9.86935 23.1875 8.27387 22.25L7.89698 22.025L3.97739 23.05L5.0201 19.25L4.76884 18.8625C3.73561 17.2213 3.18709 15.3241 3.18593 13.3875C3.18593 7.71255 7.83417 3.08756 13.5377 3.08756C16.3015 3.08756 18.902 4.16256 20.8492 6.11255C21.8136 7.06738 22.5778 8.20323 23.0975 9.45421C23.6172 10.7052 23.8822 12.0464 23.8769 13.4C23.902 19.075 19.2538 23.6875 13.5502 23.6875ZM19.2286 15.9875C18.9146 15.8375 17.3819 15.0875 17.1055 14.975C16.8166 14.875 16.6156 14.825 16.402 15.125C16.1884 15.4375 15.598 16.1375 15.4221 16.3375C15.2462 16.55 15.0578 16.575 14.7437 16.4125C14.4296 16.2625 13.4246 15.925 12.2437 14.875C11.3141 14.05 10.6985 13.0375 10.51 12.725C10.3342 12.4125 10.4849 12.25 10.6482 12.0875C10.7864 11.95 10.9623 11.725 11.1131 11.55C11.2638 11.375 11.3266 11.2375 11.4271 11.0375C11.5276 10.825 11.4774 10.65 11.402 10.5C11.3266 10.35 10.6985 8.82505 10.4472 8.20005C10.196 7.60005 9.93216 7.67505 9.74372 7.66255H9.1407C8.92713 7.66255 8.6005 7.73755 8.31156 8.05005C8.03517 8.36255 7.23115 9.11255 7.23115 10.6375C7.23115 12.1625 8.34925 13.6375 8.5 13.8375C8.65075 14.05 10.6985 17.175 13.8141 18.5125C14.5553 18.8375 15.1332 19.025 15.5854 19.1625C16.3266 19.4 17.005 19.3625 17.5452 19.2875C18.1482 19.2 19.392 18.5375 19.6432 17.8125C19.907 17.0875 19.907 16.475 19.8191 16.3375C19.7312 16.2 19.5427 16.1375 19.2286 15.9875Z"
-                          fill="#0D153C"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                      class="contacts__socials-link telegram"
-                      href="https://t.me/northernstudio"
-                      target="_blank"
-                  >
-                    <span class="sr-only">Открыть ссылку на Telegram</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 24 25" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M5.78783 14.52C5.83107 14.5333 5.87518 14.5437 5.91983 14.551C6.20275 15.2176 6.48408 15.885 6.76383 16.553C7.26683 17.755 7.77383 18.993 7.88483 19.349C8.02383 19.787 8.16983 20.085 8.32983 20.289C8.41283 20.393 8.50783 20.485 8.61983 20.555C8.67864 20.5906 8.74096 20.6201 8.80583 20.643C9.12583 20.763 9.41783 20.713 9.60083 20.652C9.70827 20.6155 9.81047 20.565 9.90483 20.502L9.90983 20.5L12.7358 18.738L16.0008 21.24C16.0488 21.2767 16.1008 21.3077 16.1568 21.333C16.5488 21.503 16.9288 21.563 17.2868 21.515C17.6428 21.465 17.9258 21.316 18.1368 21.147C18.3789 20.9515 18.572 20.7022 18.7008 20.419L18.7098 20.397L18.7128 20.389L18.7148 20.385V20.383L18.7158 20.382C18.7322 20.3386 18.7456 20.2942 18.7558 20.249L21.7358 5.22399C21.7441 5.17573 21.7487 5.12693 21.7498 5.07799C21.7498 4.63799 21.5838 4.21899 21.1948 3.96599C20.8608 3.74899 20.4898 3.73899 20.2548 3.75699C20.0028 3.77699 19.7688 3.83899 19.6118 3.88899C19.5241 3.91731 19.4374 3.94867 19.3518 3.98299L19.3408 3.98799L2.62683 10.544L2.62483 10.545C2.56815 10.5655 2.51242 10.5885 2.45783 10.614C2.32524 10.6735 2.19809 10.7444 2.07783 10.826C1.85083 10.981 1.32783 11.407 1.41683 12.111C1.48683 12.671 1.87083 13.016 2.10583 13.182C2.23383 13.273 2.35583 13.338 2.44583 13.381C2.48583 13.401 2.57183 13.435 2.60883 13.451L2.61883 13.454L5.78783 14.52ZM19.9258 5.36799H19.9238L19.8978 5.37899L3.16383 11.944L3.13783 11.954L3.12783 11.957C3.09719 11.9688 3.06715 11.9822 3.03783 11.997C3.06579 12.0127 3.09449 12.027 3.12383 12.04L6.26583 13.098C6.3213 13.1185 6.37485 13.144 6.42583 13.174L16.8028 7.09899L16.8128 7.09399C16.8533 7.06986 16.8947 7.04718 16.9368 7.02599C17.0088 6.98899 17.1238 6.93499 17.2538 6.89499C17.3438 6.86699 17.6108 6.78799 17.8988 6.88099C18.0518 6.92872 18.1882 7.01873 18.2922 7.14064C18.3963 7.26255 18.4637 7.41139 18.4868 7.56999C18.5241 7.70874 18.5251 7.85472 18.4898 7.99399C18.4198 8.26899 18.2278 8.48299 18.0528 8.64699C17.9028 8.78699 15.9568 10.663 14.0378 12.515L11.4248 15.035L10.9598 15.485L16.8318 19.987C16.9111 20.0201 16.9972 20.0338 17.0828 20.027C17.126 20.0211 17.1665 20.003 17.1998 19.975C17.2403 19.9407 17.2751 19.9002 17.3028 19.855L17.3048 19.854L20.1948 5.28099C20.1039 5.30337 20.0147 5.33211 19.9278 5.36699L19.9258 5.36799ZM11.4648 17.762L10.2928 16.864L10.0088 18.669L11.4648 17.762ZM9.21783 15.082L10.3828 13.957L12.9958 11.435L13.9688 10.497L7.44883 14.314L7.48383 14.396C7.89503 15.3674 8.30171 16.3408 8.70383 17.316L8.98683 15.516C9.01266 15.3491 9.09405 15.1968 9.21783 15.082Z"
-                            fill="#0D153C"/>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Кол-во участников записи <span class="underline">до 4 человек включительно</span>
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Каждый последующий: +500 ₽
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Готовность: 2 дня
+              </p>
             </li>
           </ul>
         </div>
-        <div class="contacts__item">
-          <h3 class="contacts__subtitle">Запишитесь на удобное время</h3>
-          <form class="contacts__form" action="">
-            <label class="contacts__label">
-              <input class="input" type="text" name="name" id="name" required placeholder="Введите свое имя">
-            </label>
-            <label class="contacts__label">
-              <input class="input" type="text" name="phone" id="phone" data-tel-input required
-                     placeholder="Введите номер телефона">
-            </label>
-            <label class="contacts__label">
-              <input class="input" type="text" name="date" id="date" required placeholder="Выберите дату">
-            </label>
-            <div class="contacts__labels">
-              <label class="contacts__label">
-                <input class="input" type="text" name="time_from" id="time_from" required placeholder="Время с">
-              </label>
-              <label class="contacts__label">
-                <input class="input" type="text" name="time_to" id="time_to" required placeholder="Время до">
-              </label>
+      </li>
+      <li class="tariff-card tariff-card--premium">
+        <p class="tariff-card__popular">
+          Самый популярный
+        </p>
+        <div class="tariff-card__wrapper tariff-card__wrapper--premium">
+          <span class="tariff-card__discount">Скидка -10%</span>
+          <div class="tariff-card__head">
+            <div class="tariff-card__info">
+              <h3 class="tariff-card__name">Написание песни</h3>
             </div>
-            <button class="contacts__btn btn" type="submit">Отправить данные</button>
-            <p class="contacts__agree">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                <path
-                    d="M8.85406 17.277L4.90302 13.3259C4.70656 13.1362 4.44343 13.0312 4.17031 13.0336C3.89719 13.0359 3.63593 13.1455 3.44279 13.3386C3.24966 13.5318 3.14011 13.793 3.13773 14.0661C3.13536 14.3393 3.24036 14.6024 3.4301 14.7989L8.1176 19.4864C8.31295 19.6816 8.57785 19.7913 8.85406 19.7913C9.13028 19.7913 9.39518 19.6816 9.59052 19.4864L21.0489 8.02802C21.2386 7.83156 21.3436 7.56843 21.3412 7.29531C21.3389 7.02219 21.2293 6.76093 21.0362 6.56779C20.843 6.37466 20.5818 6.26511 20.3086 6.26273C20.0355 6.26036 19.7724 6.36536 19.5759 6.5551L8.85406 17.277Z"
-                    fill="#8F95AA"/>
-              </svg>
-              Соглашаюсь с политикой конфиденциальности
-            </p>
-          </form>
-        </div>
-      </div>
-      <p class="contacts__title title-section title-section--center" id="exit">Как пройти?</p>
-      <div class="contacts__map" style="position:relative;overflow:hidden;"><a
-          href="https://yandex.ru/maps/54/yekaterinburg/?utm_medium=mapframe&utm_source=maps"
-          style="color:#eee;font-size:12px;position:absolute;top:0px;">Екатеринбург</a><a
-          href="https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_furmanova_105a/YkkYcw5kSEMHQFtsfXRwcntlYA==/?ll=60.594150%2C56.813782&utm_medium=mapframe&utm_source=maps&z=17.8"
-          style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Фурманова, 105А на карте Екатеринбурга,
-        ближайшее метро Чкаловская — Яндекс Карты</a>
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?ll=60.594150%2C56.813782&mode=whatshere&whatshere%5Bpoint%5D=60.594160%2C56.813764&whatshere%5Bzoom%5D=17&z=17.8"
-            width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-      </div>
-      <div class="map__inner">
-        <div class="contacts__item">
-          <p class="map__subtext">Адрес студии</p>
-          <p class="map__address">Екатеринбург, <br> ул. Фурманова 105А</p>
-          <div class="map__subtext">Как пройти?</div>
-          <div class="map__text">
-            Как только доберетесь до шлагбаума, проходите прямо через шлагбаум. Идете прямо и дойдете до нашей студии.
           </div>
+          <div class="tariff-card__pricing">
+            <p class="tariff-card__price old">от 28.200 ₽</p>
+            <p class="tariff-card__price new">от 25.000 ₽</p>
+          </div>
+          <a class="tariff-card__btn btn btn--transparent desktop" href="#contacts">Записаться</a>
+          <ul class="tariff-card__list">
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Написание аранжировки + Написание текста + Запись вокала под минусовку
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Коррекция вокала / Сведение / Мастеринг включены в стоимость
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                5 часов записи
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Кол-во участников записи <span class="underline">до 5 человек включительно</span>
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Готовность: от 14 дней
+              </p>
+            </li>
+            <li class="tariff-card__item tariff-card__item--dop">
+              <img src="images/icons/addition.svg" width="16" height="16" alt="иконка дополнения">
+              <div>
+                Дополнительно можно добавить: <br>
+                <span>1) Час записи: 500₽</span> <br>
+                <span>2) работа профессионального музыканта = 1000 ₽/трек</span> <br>
+                <span>3) помощь преподавателя при записи вокала = 1000 ₽/час</span> <br>
+              </div>
+            </li>
+          </ul>
         </div>
-        <img class="map__img" src="images/map.png" width="617" height="379" loading="lazy" alt="карта входа в студию">
+      </li>
+      <li class="tariff-card tariff-card--standard">
+        <div class="tariff-card__wrapper">
+          <span class="tariff-card__discount">Скидка -10%</span>
+          <div class="tariff-card__head">
+            <div class="tariff-card__info">
+              <h3 class="tariff-card__name">Создание аранжировки <br> + Запись вокала</h3>
+            </div>
+          </div>
+          <div class="tariff-card__pricing">
+            <p class="tariff-card__price old">от 17.200 ₽</p>
+            <p class="tariff-card__price new">от 15.480 ₽</p>
+          </div>
+          <a class="tariff-card__btn btn btn--transparent desktop" href="#contacts">Записаться</a>
+          <ul class="tariff-card__list">
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Коррекция вокала / Сведение / Мастеринг включены в стоимость
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                5 часов записи
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Кол-во участников записи <span class="underline">до 4 человек включительно</span>
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Каждый последующий +500 ₽
+              </p>
+            </li>
+            <li class="tariff-card__item">
+              <img src="images/icons/check-tariff.svg" width="16" height="15" alt="чек-иконка">
+              <p>
+                Готовность: 14 дней
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+  <section class="reviews indent" id="reviews">
+  <div class="container">
+    <h2 class="reviews__title title-section title-section--center">Отзывы о нас</h2>
+    <div class="reviews__list">
+      <div class="reviews__card" style="background-image: url('images/reviews/5.webp')">
+        <div class="reviews__info">
+          <div class="reviews__head">
+            <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/5.webp" alt="Дима Осинцев">
+          </div>
+          <p class="reviews__name">Дима Осинцев</p>
+          <span class="reviews__service">Запись подкаста</span>
+          <p class="reviews__text">
+            “Тихо, уютно, звук чистый – идеальное место для записи. Рад, что выбрал эту студию”
+          </p>
+          <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
+        </div>
+      </div>
+      <div class="reviews__card" style="background-image: url('images/reviews/6.webp')">
+        <div class="reviews__info">
+          <div class="reviews__head">
+            <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/6.webp" alt="Кристина Власова">
+          </div>
+          <p class="reviews__name">Кристина Власова</p>
+          <span class="reviews__service">Саунд-продакшн</span>
+          <p class="reviews__text">
+            “Хотела атмосферную музыку для проекта – сделали даже лучше, чем представляла. Спасибо!”
+          </p>
+          <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
+        </div>
+      </div>
+      <div class="reviews__card" style="background-image: url('images/reviews/4.webp')">
+        <div class="reviews__info">
+          <div class="reviews__head">
+            <img class="reviews__avatar" width="55" height="55" loading="lazy" src="images/avatars/4.webp" alt="Михаил Суярков">
+          </div>
+          <p class="reviews__name">Михаил Суярков</p>
+          <span class="reviews__service">Озвучка фильма</span>
+          <p class="reviews__text">
+            “Голос лёг на видео, как будто, так и было задумано. Профессиональный подход, без суеты”
+          </p>
+          <img class="reviews__stars" src="images/stars.svg" alt="звезды декор">
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+  <section class="comfort indent" id="comfort">
+  <div class="container">
+    <div class="comfort__inner">
+      <div class="comfort__info">
+        <span class="comfort__subtext">Фото студии</span>
+        <h2 class="title-section">Комфортное <br> пространство</h2>
+        <p class="comfort__text">
+          Мы создали комфортное пространство, где каждый артист чувствует себя уверенно и вдохновлённо.
+          Это помогает раскрыть творческий потенциал и записать по-настоящему живую музыку.
+        </p>
+        <div class="comfort__photos comfort__photos--mobile">
+          <div class="comfort__column">
+            <img class="comfort__img" loading="lazy" src="images/comfort/1.png" width="247" height="253" alt="фото студии звукозаписи">
+            <img class="comfort__img" loading="lazy" src="images/comfort/2.png" width="247" height="342" alt="фото студии звукозаписи">
+          </div>
+          <img class="comfort__img comfort__img--big" loading="lazy" src="images/comfort/3.png" alt="фото студии звукозаписи">
+        </div>
+        <a class="btn desktop" href="#contacts">Записаться к нам</a>
+      </div>
+      <div class="comfort__photos">
+        <div class="comfort__column">
+          <img class="comfort__img" src="images/comfort/1.png" width="223" height="229" loading="lazy" alt="фото студии звукозаписи">
+          <img class="comfort__img" src="images/comfort/2.png" width="223" height="318" loading="lazy" alt="фото студии звукозаписи">
+        </div>
+        <img class="comfort__img comfort__img--big" src="images/comfort/3.png" loading="lazy" alt="фото студии звукозаписи">
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="contacts indent" id="contacts">
+  <div class="container">
+    <h2 class="title-section title-section--center">Контакты</h2>
+    <div class="contacts__items">
+      <div class="contacts__item mode">
+        <ul class="contacts__info">
+          <li class="contacts__item">
+            <span class="contacts__inscription">Адрес студии</span>
+            <div class="contacts__links">
+              <a class="contacts__link" href="https://go.2gis.com/17xdq" target="_blank">
+                Свердловская область, город Екатеринбург, улица Фурманова, дом № 105А
+              </a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__inscription">Телефон и почта</span>
+            <div class="contacts__links">
+              <a class="contacts__link" href="mailto:studio@northernworld.ru">studio@northernworld.ru</a>
+              <a class="contacts__link" href="tel:+79043867172">+7 (904) 386 71-72</a>
+            </div>
+          </li>
+          <li class="contacts__item center">
+            <ul class="contacts__socials">
+              <li>
+                <a
+                    class="contacts__socials-link"
+                    href="https://vk.com/club229661634"
+                    target="_blank"
+                >
+                  <span class="sr-only">Открыть ссылку на ВКонтакте</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.1173 16.2802C30.3862 14.808 29.4228 13.463 28.2643 12.2969C27.8762 11.8595 27.4705 11.4381 27.0481 11.0337L26.997 10.984C26.8401 10.8319 26.6851 10.6778 26.532 10.5217C28.1162 8.31887 29.4715 5.96027 30.5771 3.48248L30.6214 3.38303L30.6524 3.27821C30.7988 2.79039 30.9655 1.86312 30.3742 1.02454C29.7614 0.159087 28.7817 0.00319764 28.1245 0.00319764H25.1049C24.4725 -0.0260324 23.8471 0.145733 23.3184 0.493864C22.7897 0.841995 22.3848 1.34861 22.1618 1.94106C21.512 3.48874 20.6983 4.96241 19.7347 6.33686V2.79845C19.7347 2.34153 19.6917 1.57553 19.2012 0.930469C18.6153 0.156399 17.7673 0.00319764 17.1787 0.00319764H12.3865C11.7611 -0.0111907 11.1542 0.215477 10.6914 0.636261C10.2286 1.05705 9.94533 1.63971 9.9003 2.26359L9.89627 2.32406V2.38454C9.89627 3.03632 10.1543 3.51742 10.3612 3.81979C10.454 3.95552 10.5521 4.07916 10.6152 4.1571L10.6287 4.17457C10.6959 4.25789 10.7402 4.31299 10.7846 4.37481C10.9028 4.53339 11.0708 4.78066 11.1192 5.41765V7.39718C10.1573 5.78624 9.36859 4.07808 8.76607 2.30122L8.75532 2.27165L8.74457 2.24343C8.58062 1.81474 8.31856 1.19118 7.79311 0.71545C7.1803 0.157743 6.45461 0.00319764 5.79477 0.00319764H2.73075C2.06284 0.00319764 1.25786 0.159087 0.657153 0.79205C0.0671936 1.41561 0 2.1628 0 2.5579V2.73798L0.0376284 2.91268C0.884622 6.85174 2.63306 10.5409 5.14568 13.6905C6.29377 15.5012 7.85252 17.0158 9.69547 18.1113C11.5384 19.2068 13.6137 19.8525 15.7529 19.996L15.808 20H15.8644C16.84 20 17.8574 19.9153 18.622 19.406C19.6528 18.7179 19.7347 17.663 19.7347 17.1362V15.6069C19.9995 15.8219 20.3274 16.1095 20.7292 16.4965C21.2157 16.983 21.6027 17.405 21.9347 17.7732L22.1121 17.9694C22.3701 18.257 22.6241 18.5406 22.8552 18.773C23.1455 19.0647 23.5043 19.3859 23.9532 19.6237C24.441 19.8804 24.953 19.9973 25.4959 19.9973H28.5613C29.2077 19.9973 30.1336 19.8441 30.7854 19.0889C31.495 18.2664 31.4412 17.2572 31.2181 16.5328L31.1778 16.4025L31.1173 16.2802ZM23.4304 16.4226C23.014 15.957 22.5851 15.5026 22.1443 15.0599L22.1403 15.0559C20.3166 13.2981 19.466 12.9931 18.8639 12.9931C18.5427 12.9931 18.1893 13.028 17.9595 13.3156C17.8573 13.4535 17.7895 13.6138 17.7619 13.7833C17.7299 13.9805 17.7155 14.1802 17.7189 14.3799V17.1362C17.7189 17.4789 17.6625 17.6227 17.5039 17.7275C17.2929 17.8686 16.8427 17.9829 15.8765 17.9829C14.041 17.858 12.2614 17.2992 10.684 16.3526C9.10657 15.4059 7.77634 14.0984 6.80268 12.5375L6.79192 12.52L6.77849 12.5039C4.4377 9.59272 2.80708 6.1764 2.01581 2.52564C2.02118 2.35094 2.05881 2.24478 2.12063 2.18027C2.18379 2.11308 2.33834 2.019 2.73075 2.019H5.79477C6.13477 2.019 6.31216 2.09426 6.43983 2.20849C6.58228 2.34019 6.7086 2.56193 6.85912 2.95703C7.61169 5.16904 8.62765 7.2386 9.59121 8.75986C10.0723 9.51915 10.5454 10.1521 10.9727 10.5996C11.1864 10.8227 11.3947 11.0082 11.5949 11.1399C11.7871 11.2662 12.0061 11.367 12.2319 11.367C12.3502 11.367 12.4886 11.3535 12.6216 11.2957C12.7655 11.2325 12.8839 11.1227 12.9576 10.984C13.096 10.7313 13.135 10.3591 13.135 9.87124V5.33837C13.0638 4.23908 12.7318 3.61956 12.4093 3.18011C12.3439 3.09229 12.2767 3.00582 12.2077 2.92074L12.1903 2.89924C12.1332 2.82942 12.0785 2.75771 12.0263 2.68422C11.9609 2.60163 11.9211 2.50162 11.9121 2.39663C11.9226 2.28984 11.9736 2.19112 12.0545 2.12067C12.1355 2.05022 12.2403 2.01337 12.3475 2.01766H17.1787C17.4555 2.01766 17.5483 2.08485 17.5953 2.14802C17.6625 2.23537 17.7189 2.41679 17.7189 2.79845V8.8835C17.7189 9.6065 18.0522 10.0957 18.536 10.0957C19.0924 10.0957 19.4942 9.75836 20.1957 9.05686L20.2078 9.04342L20.2185 9.03132C21.7923 7.11277 23.0781 4.97504 24.0351 2.68556L24.0405 2.66944C24.1121 2.46691 24.2481 2.29346 24.4277 2.17572C24.6074 2.05798 24.8207 2.00245 25.035 2.01766H28.1259C28.5452 2.01766 28.6822 2.12517 28.7279 2.18833C28.775 2.25553 28.8086 2.39932 28.7279 2.68153C27.6242 5.14943 26.2596 7.49215 24.6573 9.66966L24.6466 9.68579C24.4921 9.92365 24.3214 10.1871 24.2972 10.4881C24.2703 10.8133 24.4101 11.1076 24.656 11.4248C24.8347 11.6882 25.2043 12.0497 25.5792 12.4165L25.6142 12.4515C26.0066 12.8358 26.4326 13.2524 26.7739 13.6556L26.7834 13.665L26.7928 13.6757C27.8105 14.6911 28.6569 15.8648 29.2991 17.151C29.4012 17.5004 29.3394 17.6805 29.2588 17.7732C29.166 17.8807 28.9577 17.9815 28.5626 17.9815H25.4959C25.2869 17.9872 25.0799 17.9386 24.8952 17.8404C24.6691 17.708 24.4635 17.5432 24.2851 17.3512C24.0929 17.1591 23.8846 16.9266 23.6293 16.643L23.4304 16.4226Z" fill="#0D153C"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                    class="contacts__socials-link youtube"
+                    href="https://youtube.com/@severnyymir?si=9ckltve4tu0MFG1e"
+                    target="_blank"
+                >
+                  <span class="sr-only">Открыть ссылку на YouTube</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19" fill="none">
+                    <path d="M10.8 13.5714L17.8065 9.5L10.8 5.42857V13.5714ZM26.406 2.945C26.5815 3.58286 26.703 4.43786 26.784 5.52357C26.8785 6.60929 26.919 7.54571 26.919 8.36L27 9.5C27 12.4721 26.784 14.6571 26.406 16.055C26.0685 17.2764 25.2855 18.0636 24.0705 18.4029C23.436 18.5793 22.275 18.7014 20.493 18.7829C18.738 18.8779 17.1315 18.9186 15.6465 18.9186L13.5 19C7.8435 19 4.32 18.7829 2.9295 18.4029C1.7145 18.0636 0.9315 17.2764 0.594 16.055C0.4185 15.4171 0.297 14.5621 0.216 13.4764C0.1215 12.3907 0.081 11.4543 0.081 10.64L0 9.5C0 6.52786 0.216 4.34286 0.594 2.945C0.9315 1.72357 1.7145 0.936429 2.9295 0.597143C3.564 0.420714 4.725 0.298571 6.507 0.217143C8.262 0.122143 9.8685 0.0814286 11.3535 0.0814286L13.5 0C19.1565 0 22.68 0.217143 24.0705 0.597143C25.2855 0.936429 26.0685 1.72357 26.406 2.945Z" fill="#0D153C"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                    class="contacts__socials-link"
+                    href="https://wa.me/79043867172"
+                    target="_blank"
+                >
+                  <span class="sr-only">Открыть ссылку на WhatsApp</span>
+                  <svg class="contacts__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                    <path
+                        d="M22.3568 4.63756C21.2049 3.48019 19.8329 2.56252 18.321 1.93802C16.809 1.31351 15.1873 0.994671 13.5502 1.00007C6.69095 1.00007 1.1005 6.56255 1.1005 13.3875C1.1005 15.575 1.67839 17.7 2.75879 19.575L1 26L7.59548 24.275C9.41708 25.2625 11.4648 25.7875 13.5502 25.7875C20.4095 25.7875 26 20.225 26 13.4C26 10.0875 24.706 6.97505 22.3568 4.63756ZM13.5502 23.6875C11.691 23.6875 9.86935 23.1875 8.27387 22.25L7.89698 22.025L3.97739 23.05L5.0201 19.25L4.76884 18.8625C3.73561 17.2213 3.18709 15.3241 3.18593 13.3875C3.18593 7.71255 7.83417 3.08756 13.5377 3.08756C16.3015 3.08756 18.902 4.16256 20.8492 6.11255C21.8136 7.06738 22.5778 8.20323 23.0975 9.45421C23.6172 10.7052 23.8822 12.0464 23.8769 13.4C23.902 19.075 19.2538 23.6875 13.5502 23.6875ZM19.2286 15.9875C18.9146 15.8375 17.3819 15.0875 17.1055 14.975C16.8166 14.875 16.6156 14.825 16.402 15.125C16.1884 15.4375 15.598 16.1375 15.4221 16.3375C15.2462 16.55 15.0578 16.575 14.7437 16.4125C14.4296 16.2625 13.4246 15.925 12.2437 14.875C11.3141 14.05 10.6985 13.0375 10.51 12.725C10.3342 12.4125 10.4849 12.25 10.6482 12.0875C10.7864 11.95 10.9623 11.725 11.1131 11.55C11.2638 11.375 11.3266 11.2375 11.4271 11.0375C11.5276 10.825 11.4774 10.65 11.402 10.5C11.3266 10.35 10.6985 8.82505 10.4472 8.20005C10.196 7.60005 9.93216 7.67505 9.74372 7.66255H9.1407C8.92713 7.66255 8.6005 7.73755 8.31156 8.05005C8.03517 8.36255 7.23115 9.11255 7.23115 10.6375C7.23115 12.1625 8.34925 13.6375 8.5 13.8375C8.65075 14.05 10.6985 17.175 13.8141 18.5125C14.5553 18.8375 15.1332 19.025 15.5854 19.1625C16.3266 19.4 17.005 19.3625 17.5452 19.2875C18.1482 19.2 19.392 18.5375 19.6432 17.8125C19.907 17.0875 19.907 16.475 19.8191 16.3375C19.7312 16.2 19.5427 16.1375 19.2286 15.9875Z"
+                        fill="#0D153C"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                    class="contacts__socials-link telegram"
+                    href="https://t.me/northernstudio"
+                    target="_blank"
+                >
+                  <span class="sr-only">Открыть ссылку на Telegram</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 24 25" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.78783 14.52C5.83107 14.5333 5.87518 14.5437 5.91983 14.551C6.20275 15.2176 6.48408 15.885 6.76383 16.553C7.26683 17.755 7.77383 18.993 7.88483 19.349C8.02383 19.787 8.16983 20.085 8.32983 20.289C8.41283 20.393 8.50783 20.485 8.61983 20.555C8.67864 20.5906 8.74096 20.6201 8.80583 20.643C9.12583 20.763 9.41783 20.713 9.60083 20.652C9.70827 20.6155 9.81047 20.565 9.90483 20.502L9.90983 20.5L12.7358 18.738L16.0008 21.24C16.0488 21.2767 16.1008 21.3077 16.1568 21.333C16.5488 21.503 16.9288 21.563 17.2868 21.515C17.6428 21.465 17.9258 21.316 18.1368 21.147C18.3789 20.9515 18.572 20.7022 18.7008 20.419L18.7098 20.397L18.7128 20.389L18.7148 20.385V20.383L18.7158 20.382C18.7322 20.3386 18.7456 20.2942 18.7558 20.249L21.7358 5.22399C21.7441 5.17573 21.7487 5.12693 21.7498 5.07799C21.7498 4.63799 21.5838 4.21899 21.1948 3.96599C20.8608 3.74899 20.4898 3.73899 20.2548 3.75699C20.0028 3.77699 19.7688 3.83899 19.6118 3.88899C19.5241 3.91731 19.4374 3.94867 19.3518 3.98299L19.3408 3.98799L2.62683 10.544L2.62483 10.545C2.56815 10.5655 2.51242 10.5885 2.45783 10.614C2.32524 10.6735 2.19809 10.7444 2.07783 10.826C1.85083 10.981 1.32783 11.407 1.41683 12.111C1.48683 12.671 1.87083 13.016 2.10583 13.182C2.23383 13.273 2.35583 13.338 2.44583 13.381C2.48583 13.401 2.57183 13.435 2.60883 13.451L2.61883 13.454L5.78783 14.52ZM19.9258 5.36799H19.9238L19.8978 5.37899L3.16383 11.944L3.13783 11.954L3.12783 11.957C3.09719 11.9688 3.06715 11.9822 3.03783 11.997C3.06579 12.0127 3.09449 12.027 3.12383 12.04L6.26583 13.098C6.3213 13.1185 6.37485 13.144 6.42583 13.174L16.8028 7.09899L16.8128 7.09399C16.8533 7.06986 16.8947 7.04718 16.9368 7.02599C17.0088 6.98899 17.1238 6.93499 17.2538 6.89499C17.3438 6.86699 17.6108 6.78799 17.8988 6.88099C18.0518 6.92872 18.1882 7.01873 18.2922 7.14064C18.3963 7.26255 18.4637 7.41139 18.4868 7.56999C18.5241 7.70874 18.5251 7.85472 18.4898 7.99399C18.4198 8.26899 18.2278 8.48299 18.0528 8.64699C17.9028 8.78699 15.9568 10.663 14.0378 12.515L11.4248 15.035L10.9598 15.485L16.8318 19.987C16.9111 20.0201 16.9972 20.0338 17.0828 20.027C17.126 20.0211 17.1665 20.003 17.1998 19.975C17.2403 19.9407 17.2751 19.9002 17.3028 19.855L17.3048 19.854L20.1948 5.28099C20.1039 5.30337 20.0147 5.33211 19.9278 5.36699L19.9258 5.36799ZM11.4648 17.762L10.2928 16.864L10.0088 18.669L11.4648 17.762ZM9.21783 15.082L10.3828 13.957L12.9958 11.435L13.9688 10.497L7.44883 14.314L7.48383 14.396C7.89503 15.3674 8.30171 16.3408 8.70383 17.316L8.98683 15.516C9.01266 15.3491 9.09405 15.1968 9.21783 15.082Z" fill="#0D153C"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__item">
+        <h3 class="contacts__subtitle">Запишитесь на удобное время</h3>
+        <form class="contacts__form" action="">
+          <label class="contacts__label">
+            <input class="input" type="text" name="name" id="name" required placeholder="Введите свое имя">
+          </label>
+          <label class="contacts__label">
+            <input class="input" type="text" name="phone" id="phone" data-tel-input required
+                   placeholder="Введите номер телефона">
+          </label>
+          <div class="contacts__dates" style="display: none">
+            <p class="contacts__date" id="selectDateDay">Выбранный день: 4 апреля</p>
+            <p class="contacts__date" id="selectDateTime">Выбранное время: 11:30 - 14:00</p>
+          </div>
+          <button class="btn btn--select-time" type="button" id="buttonSelectTime">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66675 6.66667C1.66675 4.36548 3.53223 2.5 5.83341 2.5H14.1667C16.4679 2.5 18.3334 4.36548 18.3334 6.66667V14.1667C18.3334 16.4679 16.4679 18.3333 14.1667 18.3333H5.83341C3.53223 18.3333 1.66675 16.4679 1.66675 14.1667V6.66667ZM5.83341 4.16667C4.4527 4.16667 3.33341 5.28595 3.33341 6.66667V14.1667C3.33341 15.5474 4.4527 16.6667 5.83341 16.6667H14.1667C15.5475 16.6667 16.6667 15.5474 16.6667 14.1667V6.66667C16.6667 5.28595 15.5475 4.16667 14.1667 4.16667H5.83341Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66659 1.66675C7.12682 1.66675 7.49992 2.03984 7.49992 2.50008V5.00008C7.49992 5.46032 7.12682 5.83341 6.66659 5.83341C6.20635 5.83341 5.83325 5.46032 5.83325 5.00008V2.50008C5.83325 2.03984 6.20635 1.66675 6.66659 1.66675Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8.33333C5 7.8731 5.3731 7.5 5.83333 7.5H14.1667C14.6269 7.5 15 7.8731 15 8.33333C15 8.79357 14.6269 9.16667 14.1667 9.16667H5.83333C5.3731 9.16667 5 8.79357 5 8.33333Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.1666C12.5 13.7063 12.8731 13.3333 13.3333 13.3333L14.1667 13.3333C14.6269 13.3333 15 13.7063 15 14.1666C15 14.6268 14.6269 14.9999 14.1667 14.9999H13.3333C12.8731 14.9999 12.5 14.6268 12.5 14.1666Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3333 1.66675C13.7936 1.66675 14.1667 2.03984 14.1667 2.50008V5.00008C14.1667 5.46032 13.7936 5.83341 13.3333 5.83341C12.8731 5.83341 12.5 5.46032 12.5 5.00008V2.50008C12.5 2.03984 12.8731 1.66675 13.3333 1.66675Z" fill="white"/>
+            </svg>
+            Выбрать время посещения
+          </button>
+          <button class="contacts__btn btn" type="submit">Отправить данные</button>
+        </form>
+      </div>
+    </div>
+    <div id="timeModal" class="modal modal-booking">
+      <h2 class="modal-booking__title">Выбора даты услуги</h2>
+      <label class="modal-booking__label" for="date">День календаря</label>
+      <input class="input" type="date" id="date" placeholder="Выберите день">
+      <div class="modal-booking__slots">
+        <label class="modal-booking__label" for="slotsContainer">Выберите время "От" и "До"</label>
+        <div id="slotsContainer" class="slots-container"><div class="time-slot">10:00</div><div class="time-slot">10:30</div><div class="time-slot">11:00</div><div class="time-slot">11:30</div><div class="time-slot">12:00</div><div class="time-slot">12:30</div><div class="time-slot">13:00</div><div class="time-slot">13:30</div><div class="time-slot">14:00</div><div class="time-slot">14:30</div><div class="time-slot">15:00</div><div class="time-slot">15:30</div><div class="time-slot">16:00</div><div class="time-slot">16:30</div><div class="time-slot">17:00</div><div class="time-slot">17:30</div><div class="time-slot">18:00</div><div class="time-slot">18:30</div><div class="time-slot">19:00</div><div class="time-slot">19:30</div><div class="time-slot">20:00</div><div class="time-slot">20:30</div><div class="time-slot">21:00</div><div class="time-slot">21:30</div><div class="time-slot">22:00</div></div>
+        <div class="modal-booking__actions">
+          <button class="btn" id="submitBooking" type="button">Подтвердить выбор</button>
+          <button class="btn cancel close-btn" id="closeModal" type="button">Отмена</button>
+        </div>
+      </div>
+    </div>
+    <p class="contacts__title title-section title-section--center" id="exit">Как пройти?</p>
+    <div class="contacts__map" style="position:relative;overflow:hidden;"><a
+        href="https://yandex.ru/maps/54/yekaterinburg/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Екатеринбург</a><a
+        href="https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_furmanova_105a/YkkYcw5kSEMHQFtsfXRwcntlYA==/?ll=60.594150%2C56.813782&utm_medium=mapframe&utm_source=maps&z=17.8"
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Фурманова, 105А на карте Екатеринбурга,
+      ближайшее метро Чкаловская — Яндекс Карты</a>
+      <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=60.594150%2C56.813782&mode=whatshere&whatshere%5Bpoint%5D=60.594160%2C56.813764&whatshere%5Bzoom%5D=17&z=17.8"
+          width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+    <div class="map__inner">
+      <div class="contacts__item">
+        <p class="map__subtext">Адрес студии</p>
+        <p class="map__address">Екатеринбург, <br> ул. Фурманова 105А</p>
+        <div class="map__subtext">Как пройти?</div>
+        <div class="map__text">
+          Как только доберетесь до шлагбаума, проходите прямо через шлагбаум. Идете прямо и дойдете до нашей студии.
+        </div>
+      </div>
+      <img class="map__img" src="images/map.png" width="617" height="379" loading="lazy" alt="карта входа в студию">
+    </div>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__left">
-        <img class="footer__logo" width="129" height="80" src="images/icons/logo-dark.svg" loading="lazy"
-             alt="логотип студии">
+        <img class="footer__logo" width="129" height="80" src="images/icons/logo-dark.svg" loading="lazy" alt="логотип студии">
         <p class="footer__text">
           ИП Аветисян Анна Александровна <br>
           ИНН: 665811779889 <br>
@@ -588,9 +744,7 @@
   <button class="modal__close success" type="button">
     <span class="sr-only">закрыть модальное окно</span>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path
-          d="M10.0003 8.70383L14.5374 4.16675L15.8337 5.46305L11.2966 10.0001L15.8337 14.5371L14.5374 15.8334L10.0003 11.2964L5.46329 15.8334L4.16699 14.5371L8.70403 10.0001L4.16699 5.46305L5.46329 4.16675L10.0003 8.70383Z"
-          fill="#2C2C3C"></path>
+      <path d="M10.0003 8.70383L14.5374 4.16675L15.8337 5.46305L11.2966 10.0001L15.8337 14.5371L14.5374 15.8334L10.0003 11.2964L5.46329 15.8334L4.16699 14.5371L8.70403 10.0001L4.16699 5.46305L5.46329 4.16675L10.0003 8.70383Z" fill="#2C2C3C"></path>
     </svg>
   </button>
   <h3 class="modal__title">Успешное создание заявки!</h3>
@@ -601,4 +755,6 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="js/main.min.js" type="module"></script>
 <script src="js/phone-mask.js" type="module"></script>
+<script src="js/booking/form.js" type="module"></script>
+<script src="js/booking/main.js" type="module"></script>
 </body>

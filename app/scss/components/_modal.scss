@@ -148,3 +148,91 @@
     }
   }
 }
+
+.modal.modal-booking {
+  background-color: $white;
+  padding: 35px 25px 30px;
+  border-radius: 16px;
+  max-width: 450px;
+  max-height: 98vh;
+  overflow-y: scroll;
+  @include r($phone) {
+    .modal.modal-booking {
+      padding: 32px 21px 30px;
+    }
+  }
+}
+
+.modal-booking__slots {
+  margin-top: 30px;
+}
+
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  @include r($phone) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 395px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.time-slot {
+  padding: 12px 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color .4s, color .4s;
+}
+
+.time-slot:hover {
+  background-color: #1b3877;
+  color: white;
+}
+
+.time-slot.booked {
+  background-color: #e0e0e0 !important;
+  cursor: not-allowed;
+  opacity: .7;
+  color: #1e1e1e !important;
+}
+
+.time-slot.selected {
+  background-color: #1b3877;
+  color: white;
+}
+
+.time-slot.intermediate {
+  background-color: rgba(27, 56, 119, 0.2);
+  color: #000;
+}
+
+.modal-booking__actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.modal-booking__actions * {
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.modal-booking__label {
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.modal-booking__title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 30px;
+}

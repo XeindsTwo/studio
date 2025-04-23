@@ -1,11 +1,11 @@
 .btn {
-  @include flex-align-center(16);
+  @include flex-align-center(10);
   justify-content: center;
   padding: 16px 42px;
   background-color: $accent;
   font-weight: 500;
   color: $white;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 50px;
   max-width: max-content;
   border: 2px solid transparent;
@@ -55,6 +55,49 @@
       svg path {
         fill: $white
       }
+    }
+  }
+
+  &.btn--select-time {
+    padding: 16px 17px;
+    margin-bottom: 50px;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 16px;
+    @include r($phone) {
+      max-width: 100%;
+    }
+
+    &:hover {
+      background-color: #0ca6d9;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: #008CBA;
+      color: #008CBA;
+      svg path {
+        fill: #008CBA;
+      }
+    }
+
+    svg {
+      transform: translateY(-1px);
+    }
+  }
+
+  &.cancel {
+    background-color: brown;
+
+    &:hover {
+      background-color: #c03232;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: brown;
+      border-color: brown;
     }
   }
 }

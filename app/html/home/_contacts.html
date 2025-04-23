@@ -85,27 +85,35 @@
             <input class="input" type="text" name="phone" id="phone" data-tel-input required
                    placeholder="Введите номер телефона">
           </label>
-          <label class="contacts__label">
-            <input class="input" type="text" name="date" id="date" required placeholder="Выберите дату">
-          </label>
-          <div class="contacts__labels">
-            <label class="contacts__label">
-              <input class="input" type="text" name="time_from" id="time_from" required placeholder="Время с">
-            </label>
-            <label class="contacts__label">
-              <input class="input" type="text" name="time_to" id="time_to" required placeholder="Время до">
-            </label>
+          <div class="contacts__dates" style="display: none">
+            <p class="contacts__date" id="selectDateDay">Выбранный день: 4 апреля</p>
+            <p class="contacts__date" id="selectDateTime">Выбранное время: 11:30 - 14:00</p>
           </div>
-          <button class="contacts__btn btn" type="submit">Отправить данные</button>
-          <p class="contacts__agree">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-              <path
-                  d="M8.85406 17.277L4.90302 13.3259C4.70656 13.1362 4.44343 13.0312 4.17031 13.0336C3.89719 13.0359 3.63593 13.1455 3.44279 13.3386C3.24966 13.5318 3.14011 13.793 3.13773 14.0661C3.13536 14.3393 3.24036 14.6024 3.4301 14.7989L8.1176 19.4864C8.31295 19.6816 8.57785 19.7913 8.85406 19.7913C9.13028 19.7913 9.39518 19.6816 9.59052 19.4864L21.0489 8.02802C21.2386 7.83156 21.3436 7.56843 21.3412 7.29531C21.3389 7.02219 21.2293 6.76093 21.0362 6.56779C20.843 6.37466 20.5818 6.26511 20.3086 6.26273C20.0355 6.26036 19.7724 6.36536 19.5759 6.5551L8.85406 17.277Z"
-                  fill="#8F95AA"/>
+          <button class="btn btn--select-time" type="button" id="buttonSelectTime">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66675 6.66667C1.66675 4.36548 3.53223 2.5 5.83341 2.5H14.1667C16.4679 2.5 18.3334 4.36548 18.3334 6.66667V14.1667C18.3334 16.4679 16.4679 18.3333 14.1667 18.3333H5.83341C3.53223 18.3333 1.66675 16.4679 1.66675 14.1667V6.66667ZM5.83341 4.16667C4.4527 4.16667 3.33341 5.28595 3.33341 6.66667V14.1667C3.33341 15.5474 4.4527 16.6667 5.83341 16.6667H14.1667C15.5475 16.6667 16.6667 15.5474 16.6667 14.1667V6.66667C16.6667 5.28595 15.5475 4.16667 14.1667 4.16667H5.83341Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66659 1.66675C7.12682 1.66675 7.49992 2.03984 7.49992 2.50008V5.00008C7.49992 5.46032 7.12682 5.83341 6.66659 5.83341C6.20635 5.83341 5.83325 5.46032 5.83325 5.00008V2.50008C5.83325 2.03984 6.20635 1.66675 6.66659 1.66675Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8.33333C5 7.8731 5.3731 7.5 5.83333 7.5H14.1667C14.6269 7.5 15 7.8731 15 8.33333C15 8.79357 14.6269 9.16667 14.1667 9.16667H5.83333C5.3731 9.16667 5 8.79357 5 8.33333Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.1666C12.5 13.7063 12.8731 13.3333 13.3333 13.3333L14.1667 13.3333C14.6269 13.3333 15 13.7063 15 14.1666C15 14.6268 14.6269 14.9999 14.1667 14.9999H13.3333C12.8731 14.9999 12.5 14.6268 12.5 14.1666Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3333 1.66675C13.7936 1.66675 14.1667 2.03984 14.1667 2.50008V5.00008C14.1667 5.46032 13.7936 5.83341 13.3333 5.83341C12.8731 5.83341 12.5 5.46032 12.5 5.00008V2.50008C12.5 2.03984 12.8731 1.66675 13.3333 1.66675Z" fill="white"/>
             </svg>
-            Соглашаюсь с политикой конфиденциальности
-          </p>
+            Выбрать время посещения
+          </button>
+          <button class="contacts__btn btn" type="submit">Отправить данные</button>
         </form>
+      </div>
+    </div>
+    <div id="timeModal" class="modal modal-booking">
+      <h2 class="modal-booking__title">Выбора даты услуги</h2>
+      <label class="modal-booking__label" for="date">День календаря</label>
+      <input class="input" type="date" id="date" placeholder="Выберите день">
+      <div class="modal-booking__slots">
+        <label class="modal-booking__label" for="slotsContainer">Выберите время "От" и "До"</label>
+        <div id="slotsContainer" class="slots-container"><div class="time-slot">10:00</div><div class="time-slot">10:30</div><div class="time-slot">11:00</div><div class="time-slot">11:30</div><div class="time-slot">12:00</div><div class="time-slot">12:30</div><div class="time-slot">13:00</div><div class="time-slot">13:30</div><div class="time-slot">14:00</div><div class="time-slot">14:30</div><div class="time-slot">15:00</div><div class="time-slot">15:30</div><div class="time-slot">16:00</div><div class="time-slot">16:30</div><div class="time-slot">17:00</div><div class="time-slot">17:30</div><div class="time-slot">18:00</div><div class="time-slot">18:30</div><div class="time-slot">19:00</div><div class="time-slot">19:30</div><div class="time-slot">20:00</div><div class="time-slot">20:30</div><div class="time-slot">21:00</div><div class="time-slot">21:30</div><div class="time-slot">22:00</div></div>
+        <div class="modal-booking__actions">
+          <button class="btn" id="submitBooking" type="button">Подтвердить выбор</button>
+          <button class="btn cancel close-btn" id="closeModal" type="button">Отмена</button>
+        </div>
       </div>
     </div>
     <p class="contacts__title title-section title-section--center" id="exit">Как пройти?</p>
@@ -114,7 +122,7 @@
         style="color:#eee;font-size:12px;position:absolute;top:0px;">Екатеринбург</a><a
         href="https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_furmanova_105a/YkkYcw5kSEMHQFtsfXRwcntlYA==/?ll=60.594150%2C56.813782&utm_medium=mapframe&utm_source=maps&z=17.8"
         style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Фурманова, 105А на карте Екатеринбурга,
-      ближайшее метро Чкаловская — Яндекс Карты</a>
+      ближайшее метро Чкаловская — Яндекс Карты</a>
       <iframe
           src="https://yandex.ru/map-widget/v1/?ll=60.594150%2C56.813782&mode=whatshere&whatshere%5Bpoint%5D=60.594160%2C56.813764&whatshere%5Bzoom%5D=17&z=17.8"
           width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
